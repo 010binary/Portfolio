@@ -37,6 +37,6 @@ Explore the different sections of the portfolio to learn more about me, my skill
 
 - Email: Augustine32fg@gmail.com
 - LinkedIn: [Augustine](https://www.linkedin.com/in/alpha-augustine)
-- Twitter: [@August13200268](https://twitter.com/yourusername)
+- Twitter: [@August13200268](https://twitter.com/August13200296)
 
 Thank you for visiting my portfolio!
