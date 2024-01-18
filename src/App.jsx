@@ -1,8 +1,9 @@
-import { useState } from 'react'
 
 function App() {
   return (
-    <home />
+    <div className='container'>
+lorem
+    </div>
   )
 }
 

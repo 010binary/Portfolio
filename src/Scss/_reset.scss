@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './buttons';
+@import './card';
+@import './mobile';
+
+
+// Color config
+$background: #ECEBEB;
+$black: #000;
+$primary-color: #0B94EB;
+$secondary-color: #077bc3;
+$moblie-value: 850px;
+$header-font: 'Podkova', serif;
+$paragraph-font: 'Rubik', sans-serif;
+$skill-font: 'Montserrat', sans-serif;
+
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background;
+
+}
+
+#root {
+    padding: 0 10vw;
+}
+
+//  Handle (Thumb) on hover for firefox
+*:hover {
+    scrollbar-color: $secondary-color transparent;
+}
+
+// Width of the scrollbar for firefox
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $primary-color transparent;
+    scrollbar-width: 5px;
+}
+
+// width 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+// Handle 
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+}
+
+//  Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+    background: $black;
+}
