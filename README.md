@@ -5,12 +5,10 @@ Welcome to my portfolio project! This project showcases my skills, projects, and
 ## Table of Contents
 
 - [Description](#description)
-- [Features](#features)
+- [Features](#usage)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Description
@@ -28,10 +26,12 @@ This portfolio project serves as an interactive and informative space to present
 ## Technologies Used
 
 - React: Frontend framework for building a responsive and dynamic user interface.
+- SCSS: CSS preprocessor for Styling
+- Figma: Design tool
 
 ## Usage
 
-Explore the different sections of the portfolio to learn more about me, my skills, and the projects I've worked on. Feel free to reach out through the provided contact information.
+Explore the different sections of the portfolio to learn more about me, my skills, and the projects I've worked on. Feel free to reach out through the provided in the portfolio or on through contact information below.
 
 ## Contact
 
