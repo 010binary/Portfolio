@@ -1,8 +1,9 @@
+import NarBar from "./components/navbar/NarBar"
 
 function App() {
   return (
     <div className='container'>
-lorem
+<NarBar/>
     </div>
   )
 }
