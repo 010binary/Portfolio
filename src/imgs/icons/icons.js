@@ -1,48 +1,49 @@
-import logo from './Logo.svg';
-import aboutMe from './About me label.svg';
-import download from './Download icon.svg';
-import github from './github icon.svg';
-import githubFooter from './Github footer.svg';
-import instagram from './instagram icon.svg';
-import instagramFooter from './instagram footer.svg';
-import leftarrow from './left.svg';
-import lightbulb from './lightbulb icon.svg';
-import linkedin from './Linkedin icon.svg';
-import linkedinFooter from './Linkedin footer.svg';
-import location from './Location icon.svg';
-import message from './message icon.svg';
-import music from './music icon.svg';
-import phone from './phone icon.svg';
-import picklip from './Rectangle 362 top .svg';
-import picklipp from './Rectangle 363 side.svg';
-import right from './right.svg';
-import seeMore from './see more label.svg';
-import design from './Side design.svg';
-import skill from './skill label.svg';
-import twitter from './twitter icon.svg';
-import twitterFooter from './twitter footer.svg';
+import Logo from './Logo.svg';
+import AboutMe from './About-me.svg';
+import Download from './Download-icon.svg';
+import Github from './Github-icon.svg';
+import GithubFooter from './Github-footer.svg';
+import Instagram from './Instagram-icon.svg';
+import InstagramFooter from './Instragram-footer.svg';
+import Leftarrow from './Left.svg';
+import Lightbulb from './Lightbulb-icon.svg';
+import Linkedin from './Linkedin-icon.svg';
+import LinkedinFooter from './Linkedin-footer.svg';
+import Location from './Location-icon.svg';
+import Message from './Message-icon.svg';
+import Music from './Music-icon.svg';
+import Phone from './Phone-icon.svg';
+import Picklip from './Rectangle-top.svg';
+import Picklipp from './Rectangle-side.svg';
+import Right from './Right.svg';
+import SeeMore from './See-more.svg';
+import Design from './Side-design.svg';
+import Skill from './Skills-label.svg';
+import Twitter from './Twitter-icon.svg';
+import TwitterFooter from './Twiiter-footer.svg';
 
 export{
-aboutMe,
-download,
-github,
-githubFooter,
-instagram,
-instagramFooter,
-leftarrow,
-lightbulb,
-linkedin,
-linkedinFooter,
-location,
-message,
-music,
-phone,
-picklip,
-picklipp,
-right,
-seeMore,
-design,
-skill,
-twitter,
-twitterFooter
+    Logo,
+    AboutMe,
+    Download,
+    Github,
+    GithubFooter,
+    Instagram,
+    InstagramFooter,
+    Leftarrow,
+    Lightbulb,
+    Linkedin,
+    LinkedinFooter,
+    Location,
+    Message,
+    Music,
+    Phone,
+    Picklip,
+    Picklipp,
+    Right,
+    SeeMore,
+    Design,
+    Skill,
+    Twitter,
+    TwitterFooter
 }

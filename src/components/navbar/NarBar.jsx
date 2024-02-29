@@ -1,10 +1,12 @@
-import {logo} from '../../imgs/icons/icons'
-
+import {Logo, LinkedinFooter} from '../../imgs/icons/Icons'
 import React from 'react'
 
 const NarBar = () => {
   return (
-    <div>{logo}</div>
+  <>
+    <img src={Logo} alt="logo image"/>
+    <img src={LinkedinFooter} alt="logo image"/>
+  </>
   )
 }
 
