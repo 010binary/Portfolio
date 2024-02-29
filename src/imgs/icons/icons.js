@@ -1,6 +1,7 @@
 import Logo from './Logo.svg';
 import AboutMe from './About-me.svg';
 import Download from './Download-icon.svg';
+import FooterDesign from './Footer-design.svg';
 import Github from './Github-icon.svg';
 import GithubFooter from './Github-footer.svg';
 import Instagram from './Instagram-icon.svg';
@@ -26,6 +27,7 @@ export{
     Logo,
     AboutMe,
     Download,
+    FooterDesign,
     Github,
     GithubFooter,
     Instagram,
