@@ -14,8 +14,9 @@
 
 %buttonType2 {
   @extend %buttonType1;
-  padding: 0.7em 1em;
+  padding: 0.3em 1em;
   background-color: transparent;
+  border: 3px $black solid;
 
   &:hover {
     background-color: $primary-color;

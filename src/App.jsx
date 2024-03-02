@@ -1,10 +1,10 @@
 import "./App.scss";
-import NarBar from "./components/navbar/NarBar";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <div className="container">
-      <NarBar />
+      <Footer />
     </div>
   );
 }

@@ -1,8 +1,43 @@
+@import "../../Scss/reset";
+@import "../../Scss/buttons";
+
 nav {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*test-border*/
+  border-bottom: 1px solid $primary-color;
   .logo {
     img {
-      width: 100px;
-      height: 100px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .navlinks {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+
+    .navlist {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $black;
+        font-size: 1.3rem;
+        font-family: $paragraph-font;
+      }
+    }
+  }
+  .navbtn {
+    &__resume {
+      @extend %buttonType2;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      img {
+        margin-left: 5px;
+      }
     }
   }
 }

@@ -1,0 +1,23 @@
+@import "../../Scss/reset";
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid $black;
+  padding: 10px 0;
+
+  .footer__text {
+    font-size: 1.3rem;
+    font-family: $paragraph-font;
+  }
+
+  .footer__icon {
+    display: flex;
+    justify-content: space-between;
+    width: 12vw;
+    img {
+      width: 35px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
-import { Logo } from "../Icons";
+import { Logo, Download } from "../Icons";
+import "./NarBar.scss";
 
 const NarBar = () => {
   return (
@@ -29,7 +30,9 @@ const NarBar = () => {
         </li>
       </div>
       <div className="navbtn">
-        <div className="btn resume navbtn__resume">Resume</div>
+        <div className="btn resume navbtn__resume">
+          Resume <img src={Download} alt="Download svg" />
+        </div>
       </div>
     </nav>
   );
