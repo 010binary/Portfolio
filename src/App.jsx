@@ -1,10 +1,10 @@
 import "./App.scss";
-import Footer from "./components/footer/Footer";
+import Hero from "./components/hero/Hero";
 
 function App() {
   return (
     <div className="container">
-      <Footer />
+      <Hero />
     </div>
   );
 }

@@ -24,6 +24,7 @@ body {
   background-color: $background;
 }
 
+/*This is going to be transfer to the container*/
 #root {
   padding: 0 10vw;
   background-color: $background;
@@ -64,3 +65,10 @@ body {
 @import "./buttons";
 @import "./card";
 @import "./mobile";
+
+.block {
+  display: block;
+}
+.blue-text {
+  color: $primary-color;
+}

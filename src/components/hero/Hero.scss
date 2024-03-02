@@ -1,0 +1,37 @@
+@import "../../Scss/reset";
+@import "../../Scss/buttons";
+
+.hero__section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .hero__section--leftside {
+    h1 {
+      font-family: $header-font;
+      font-size: 2rem;
+    }
+    .description {
+      font-family: $paragraph-font;
+      font-size: 1rem;
+    }
+    .hero-socials {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .hero-button {
+      button {
+        @extend %buttonType1;
+        margin: 0 auto;
+        width: 70%;
+        height: 40px;
+      }
+    }
+  }
+
+  .hero__section--rightside {
+    width: 700px;
+    background-color: $primary-color;
+  }
+}
