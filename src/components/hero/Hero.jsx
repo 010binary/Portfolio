@@ -1,11 +1,11 @@
 import "./Hero.scss";
 import NarBar from "../navbar/NarBar";
 import { Instagram, Github, Twitter, Linkedin } from "../Icons";
+import { HeroImg } from "../Photos";
 
 const Hero = () => {
   return (
     <>
-      <NarBar />
       <div className="hero__section">
         <div className="hero__section--leftside">
           <h1>
@@ -40,7 +40,9 @@ const Hero = () => {
             <button>Hire me</button>
           </section>
         </div>
-        <div className="hero__section--rightside"></div>
+        <div className="hero__section--rightside">
+          <img src={HeroImg} alt="My picture" />
+        </div>
       </div>
     </>
   );

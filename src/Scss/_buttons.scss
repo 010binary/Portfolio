@@ -6,9 +6,10 @@
   border: none;
   text-transform: capitalize;
   transition: 0.5s ease-in-out;
-
+  font-family: $header-font;
   &:hover {
     background-color: $secondary-color;
+    transform: scale(1.1);
   }
 }
 
@@ -17,8 +18,7 @@
   padding: 0.3em 1em;
   background-color: transparent;
   border: 3px $black solid;
-
   &:hover {
-    background-color: $primary-color;
+    background-color: transparent;
   }
 }
