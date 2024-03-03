@@ -1,0 +1,31 @@
+@import "../../Scss/reset";
+
+.about__section {
+  height: 50vh;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+
+    .about__section--leftside {
+    }
+    .about__section--rightside {
+      width: 50%;
+      font-size: 1.2rem;
+      h2 {
+        font-family: $syne-font;
+        font-weight: 800;
+        font-size: 3rem;
+        margin-top: 10px;
+      }
+      .about__section--description {
+        font-family: $paragraph-font;
+        margin-top: 10px;
+      }
+      .music {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}
