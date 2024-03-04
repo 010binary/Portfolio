@@ -1,10 +1,10 @@
 import "./App.scss";
-import Skills from "./components/skill/Skills";
+import Project from "./components/projects/Project";
 
 function App() {
   return (
     <div className="container">
-      <Skills />
+      <Project />
     </div>
   );
 }
