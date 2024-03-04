@@ -1,0 +1,15 @@
+@import "../../Scss/reset";
+
+.about__section {
+  & > img {
+    margin-left: 20px;
+  }
+  &--header {
+    display: flex;
+    &--buttons {
+      button {
+        background-color: $primary-color;
+      }
+    }
+  }
+}

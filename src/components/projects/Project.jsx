@@ -32,12 +32,14 @@ const Project = () => {
       <img src={Projects} alt="the Label for the project section" />
       <div className="about__section--header">
         <h3>Featured Projects</h3>
-        <button>
-          <img src={Leftarrow} alt="An arrow indicating left scroll" />
-        </button>
-        <button>
-          <img src={Right} alt="An arrow indicating Right scroll" />
-        </button>
+        <div className="about__section--header--buttons">
+          <button>
+            <img src={Leftarrow} alt="An arrow indicating left scroll" />
+          </button>
+          <button>
+            <img src={Right} alt="An arrow indicating Right scroll" />
+          </button>
+        </div>
       </div>
       <div className="about__section--content">{renderProject}</div>
     </div>
