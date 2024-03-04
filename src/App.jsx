@@ -1,11 +1,10 @@
 import "./App.scss";
-import About from "./components/about/About";
-
+import Skills from "./components/skill/Skills";
 
 function App() {
   return (
     <div className="container">
-      <About />
+      <Skills />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 @import "../../Scss/reset";
 
 .about__section {
-  height: 50vh;
+  margin-top: 40px;
   &-content {
     display: flex;
     justify-content: space-between;
@@ -20,11 +20,20 @@
       .about__section--description {
         font-family: $paragraph-font;
         margin-top: 10px;
+        b {
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+            color: $primary-color;
+          }
+        }
       }
       .music {
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        margin-left: 85%;
+        margin-top: 6vh;
+      }
+      .light {
+        margin-left: 10%;
       }
     }
   }
