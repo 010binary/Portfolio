@@ -1,33 +1,36 @@
 import "./Skills.scss";
-import { Skill } from "../Icons";
+import { SeeMore, Skill } from "../Icons";
 import { Html, Js, Python, React, Scss, Figma, GitHub, Flask } from "../Photos";
 
 const Skills = () => {
   const skillsList = [
-    { name: "Html", img: Html },
-    { name: "Js", img: Js },
-    { name: "Python", img: Python },
-    { name: "React", img: React },
+    { name: "Html5", img: Html },
     { name: "Scss", img: Scss },
+    { name: "Javascript", img: Js },
+    { name: "React", img: React },
     { name: "Figma", img: Figma },
     { name: "GitHub", img: GitHub },
+    { name: "Python", img: Python },
     { name: "Flask", img: Flask },
   ];
 
   const renderSkills = skillsList.map((skill) => (
-    <div key={skill.name} className={skill.name}>
+    <div key={skill.name} className={`${skill.name} skill-img `}>
       <img src={skill.img} alt={`An image of ${skill.name}`} />
+      <p className={skill.name}>{skill.name}</p>
     </div>
   ));
 
   return (
     <div className="skill__section">
-      <img src={Skill} alt="" />
+      <img src={Skill} alt="" className="margin" />
       <div className="skill__section-content">
         <div className="row-1">{renderSkills.slice(0, 4)}</div>
         <div className="row-2">{renderSkills.slice(4)}</div>
       </div>
-      
+      <div className="see-more">
+        <img src={SeeMore} alt="see more" />
+      </div>
     </div>
   );
 };

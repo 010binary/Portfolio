@@ -1,2 +1,45 @@
+@import "../../Scss/reset";
+.skill__section {
+  padding: 5vh 0;
 
+  .margin {
+    margin-left: 85%;
+  }
+  &-content {
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .row-1,
+    .row-2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5vh 8vw;
 
+      .skill-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+
+        img {
+          width: 120px;
+          height: 100px;
+        }
+
+        p {
+          text-align: center;
+          font-family: $skill-font;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

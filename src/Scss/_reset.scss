@@ -12,7 +12,7 @@ $moblie-value: 850px;
 $header-font: "Podkova", serif;
 $paragraph-font: "Rubik", sans-serif;
 $skill-font: "Montserrat", sans-serif;
-$syne-font:"Syne", sans-serif;
+$syne-font: "Syne", sans-serif;
 
 *,
 *::after,
@@ -24,6 +24,17 @@ $syne-font:"Syne", sans-serif;
 
 body {
   background-color: $background;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+/* Disable copying content */
+::selection {
+  background-color: transparent;
 }
 
 /*This is going to be transfer to the container*/
