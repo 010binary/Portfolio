@@ -33,10 +33,10 @@ const Project = () => {
       <div className="project__section--header">
         <h3>Featured Projects</h3>
         <div className="project__section--header--buttons">
-          <button>
+          <button className="left-btn">
             <img src={Leftarrow} alt="An arrow indicating left scroll" />
           </button>
-          <button>
+          <button className="right-btn">
             <img src={Right} alt="An arrow indicating Right scroll" />
           </button>
         </div>
