@@ -17,7 +17,7 @@ const Project = () => {
     },
   ];
   const renderProject = displayProject.map((project) => (
-    <div key={project.name}>
+    <div key={project.name} className="projects">
       <img src={project.img} alt={`project image for ${project.name}`} />
       <section className="about-project">
         <p className="project-name">{project.name}</p>
@@ -28,11 +28,11 @@ const Project = () => {
     </div>
   ));
   return (
-    <div className="about__section">
+    <div className="project__section">
       <img src={Projects} alt="the Label for the project section" />
-      <div className="about__section--header">
+      <div className="project__section--header">
         <h3>Featured Projects</h3>
-        <div className="about__section--header--buttons">
+        <div className="project__section--header--buttons">
           <button>
             <img src={Leftarrow} alt="An arrow indicating left scroll" />
           </button>
@@ -41,7 +41,7 @@ const Project = () => {
           </button>
         </div>
       </div>
-      <div className="about__section--content">{renderProject}</div>
+      <div className="project__section--content">{renderProject}</div>
     </div>
   );
 };
