@@ -17,7 +17,7 @@ const Project = () => {
     },
   ];
   const renderProject = displayProject.map((project) => (
-    <div key={project.name} className="projects">
+    <div key={project.name} className="project__section--content--projects">
       <img src={project.img} alt={`project image for ${project.name}`} />
       <section className="about-project">
         <p className="project-name">{project.name}</p>

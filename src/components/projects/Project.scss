@@ -44,5 +44,22 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    &--projects {
+      & > img {
+        margin: 0;
+        padding: 0;
+      }
+      .about-project {
+        background-color: $white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 8px;
+        .project-name {
+          font-family: $paragraph-font;
+          font-weight: 500;
+        }
+      }
+    }
   }
 }
