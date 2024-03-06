@@ -4,14 +4,14 @@ import { Projects, Leftarrow, Right } from "../Icons";
 
 const Project = () => {
   const displayProject = [
-    { name: "Agency website", img: Portfolio1, languages: ["React", "Flask"] },
+    { name: "Agency website.", img: Portfolio1, languages: ["React", "Flask"] },
     {
-      name: "Dashboard website",
+      name: "Dashboard website.",
       img: Portfolio2,
       languages: ["React", "Flask"],
     },
     {
-      name: "Support Center website",
+      name: "Support Center website.",
       img: Portfolio3,
       languages: ["React", "Flask"],
     },
@@ -22,7 +22,10 @@ const Project = () => {
       <section className="about-project">
         <p className="project-name">{project.name}</p>
         <section className="project-decription">
-          <p className="Project-languages">{project.languages}</p>
+          <p className="Project-languages">
+            {project.languages.map((language, index) => (
+              <span key={index}>{language}</span>
+            ))}</p>
         </section>
       </section>
     </div>
