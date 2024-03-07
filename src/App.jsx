@@ -1,10 +1,10 @@
 import "./App.scss";
-import Project from "./components/projects/Project";
+import Contact from "./components/contact/Contact";
 
 function App() {
   return (
     <div className="container">
-      <Project />
+      <Contact />
     </div>
   );
 }
