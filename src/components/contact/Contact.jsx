@@ -49,54 +49,55 @@ const Contact = () => {
             <div className="flex">
               <label>
                 <input
-                  className="input"
-                  type="text"
-                  placeholder=""
                   required=""
+                  placeholder=""
+                  type="text"
+                  className="input"
                 />
-                <span>Firstname</span>
+                <span>first name</span>
               </label>
 
               <label>
                 <input
-                  className="input"
-                  type="text"
-                  placeholder=""
                   required=""
+                  placeholder=""
+                  type="text"
+                  className="input"
                 />
-                <span>Lastname</span>
+                <span>last name</span>
               </label>
             </div>
 
             <label>
               <input
-                className="input"
-                type="email"
-                placeholder=""
                 required=""
+                placeholder=""
+                type="email"
+                className="input"
               />
-              <span>Email</span>
+              <span>email</span>
             </label>
 
             <label>
-              <input
-                className="input"
-                type="password"
-                placeholder=""
-                required=""
-              />
-              <span>Password</span>
+              <input required="" type="tel" placeholder="" className="input" />
+              <span>contact number</span>
             </label>
             <label>
-              <input
-                className="input"
-                type="password"
-                placeholder=""
+              <textarea
                 required=""
-              />
-              <span>Confirm password</span>
+                rows="3"
+                placeholder=""
+                className="input01"
+              ></textarea>
+              <span>message</span>
             </label>
-            <button className="submit">Submit</button>
+
+            <button className="fancy" href="#">
+              <span className="top-key"></span>
+              <span className="text">submit</span>
+              <span className="bottom-key-1"></span>
+              <span className="bottom-key-2"></span>
+            </button>
           </form>
         </div>
       </div>
