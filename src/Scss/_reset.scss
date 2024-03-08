@@ -9,6 +9,7 @@ $black: #000;
 $white: #fff;
 $primary-color: #0b94eb;
 $secondary-color: #077bc3;
+$gray: rgb(105, 105, 105);
 $moblie-value: 850px;
 $header-font: "Podkova", serif;
 $paragraph-font: "Rubik", sans-serif;
@@ -79,6 +80,7 @@ body {
 @import "./buttons";
 @import "./card";
 @import "./mobile";
+@import "./input";
 
 .block {
   display: block;

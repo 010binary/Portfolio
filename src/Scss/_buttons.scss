@@ -22,3 +22,19 @@
     background-color: transparent;
   }
 }
+
+%submit {
+  width: 50%;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+  background-color: $primary-color;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}

@@ -22,7 +22,7 @@ import Design from "../imgs/icons/Side-design.svg";
 import Skill from "../imgs/icons/Skills-label.svg";
 import Twitter from "../imgs/icons/Twitter-icon.svg";
 import TwitterFooter from "../imgs/icons/Twiiter-footer.svg";
-import Contact from "../imgs/icons/Contact-me.svg";
+import Contacts from "../imgs/icons/Contact-me.svg";
 import Projects from "../imgs/icons/Project.svg";
 
 export {
@@ -50,6 +50,6 @@ export {
   Skill,
   Twitter,
   TwitterFooter,
-  Contact,
+  Contacts,
   Projects,
 };
