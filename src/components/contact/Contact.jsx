@@ -47,7 +47,7 @@ const Contact = () => {
         <div className="contact__section--content--form">
           <form className="form">
             <div className="flex">
-              <label>
+              <label className="firstname">
                 <input
                   required=""
                   placeholder=""
@@ -57,7 +57,7 @@ const Contact = () => {
                 <span>first name</span>
               </label>
 
-              <label>
+              <label className="lastname">
                 <input
                   required=""
                   placeholder=""

@@ -35,7 +35,7 @@ body {
 
 /* Disable copying content */
 ::selection {
-  background-color: transparent;
+  background-color: $primary-color;
 }
 
 /*This is going to be transfer to the container*/
