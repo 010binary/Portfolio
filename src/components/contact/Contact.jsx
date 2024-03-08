@@ -25,7 +25,7 @@ const Contact = () => {
               <p>+234-811-3417-474</p>
             </div>
           </div>
-          <div className="Email me">
+          <div className="Email-me">
             <div className="img">
               <img src={Message} alt="Email icon" />
             </div>
@@ -47,57 +47,39 @@ const Contact = () => {
         <div className="contact__section--content--form">
           <form className="form">
             <div className="flex">
-              <label className="firstname">
-                <input
-                  required=""
-                  placeholder=""
-                  type="text"
-                  className="input"
-                />
-                <span>first name</span>
+              <label>
+                <input className="input" type="text" required />
+                <span>Fullname</span>
               </label>
 
-              <label className="lastname">
-                <input
-                  required=""
-                  placeholder=""
-                  type="text"
-                  className="input"
-                />
-                <span>last name</span>
+              <label>
+                <input className="input" type="email" required />
+                <span>Email</span>
               </label>
             </div>
 
-            <label>
-              <input
-                required=""
-                placeholder=""
-                type="email"
-                className="input"
-              />
-              <span>email</span>
-            </label>
+            <div className="flex">
+              <label>
+                <input className="input" type="tel" required />
+                <span>Phone number</span>
+              </label>
 
-            <label>
-              <input required="" type="tel" placeholder="" className="input" />
-              <span>contact number</span>
-            </label>
+              <label>
+                <input className="input" type="text" required />
+                <span>Topic</span>
+              </label>
+            </div>
             <label>
               <textarea
-                required=""
-                rows="3"
-                placeholder=""
-                className="input01"
+                className="input"
+                name="message"
+                rows="5"
+                cols="50"
+                required
               ></textarea>
-              <span>message</span>
+              <span>Message</span>
             </label>
-
-            <button className="fancy" href="#">
-              <span className="top-key"></span>
-              <span className="text">submit</span>
-              <span className="bottom-key-1"></span>
-              <span className="bottom-key-2"></span>
-            </button>
+            <button className="submit">Submit</button>
           </form>
         </div>
       </div>
