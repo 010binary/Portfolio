@@ -1,11 +1,13 @@
 import "./About.scss";
-import { AboutMe, Lightbulb, Music } from "../Icons";
+import { AboutMe, Lightbulb, Music, Design } from "../Icons";
 import { AboutmeImg } from "../Photos";
 
 const About = () => {
   return (
     <div className="about__section">
-      <img src={AboutMe} alt="" />
+      <img src={AboutMe} alt="About me label" />
+      <img src={Design} alt="Side design" className="About-side-design"/>
+
       <div className="about__section-content">
         <div className="about__section--leftside">
           <img src={AboutmeImg} alt="" />

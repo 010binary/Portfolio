@@ -1,13 +1,21 @@
 @import "../../Scss/reset";
 
 .about__section {
+  position: relative;
   margin-top: 40px;
+
+  .About-side-design {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+
   &-content {
     display: flex;
     justify-content: space-between;
 
-    .about__section--leftside {
-    }
+    /*.about__section--leftside {
+    }*/
     .about__section--rightside {
       width: 50%;
       font-size: 1.2rem;
