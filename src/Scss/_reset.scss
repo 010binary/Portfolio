@@ -41,7 +41,6 @@ body {
 
 /*This is going to be transfer to the container*/
 #root {
-  padding: 0 10vw;
   background-color: $background;
 }
 
@@ -56,7 +55,9 @@ body {
   scrollbar-color: $primary-color transparent;
   scrollbar-width: 5px;
 }
-
+.container {
+  padding: 0 10vw;
+}
 // width
 ::-webkit-scrollbar {
   width: 5px;

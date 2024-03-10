@@ -25,7 +25,8 @@ const Project = () => {
           <p className="Project-languages">
             {project.languages.map((language, index) => (
               <span key={index}>{language}</span>
-            ))}</p>
+            ))}
+          </p>
         </section>
       </section>
     </div>
@@ -33,18 +34,20 @@ const Project = () => {
   return (
     <div className="project__section">
       <img src={Projects} alt="the Label for the project section" />
-      <div className="project__section--header">
-        <h3>Featured Projects</h3>
-        <div className="project__section--header--buttons">
-          <button className="left-btn">
-            <img src={Leftarrow} alt="An arrow indicating left scroll" />
-          </button>
-          <button className="right-btn">
-            <img src={Right} alt="An arrow indicating Right scroll" />
-          </button>
+      <div className="container">
+        <div className="project__section--header">
+          <h3>Featured Projects</h3>
+          <div className="project__section--header--buttons">
+            <button className="left-btn">
+              <img src={Leftarrow} alt="An arrow indicating left scroll" />
+            </button>
+            <button className="right-btn">
+              <img src={Right} alt="An arrow indicating Right scroll" />
+            </button>
+          </div>
         </div>
+        <div className="project__section--content">{renderProject}</div>
       </div>
-      <div className="project__section--content">{renderProject}</div>
     </div>
   );
 };

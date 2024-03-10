@@ -3,14 +3,18 @@
 .contact__section {
   position: relative;
 
-  .abs {
+  .contact-side-design {
     position: absolute;
-    right: 0;
-    margin-top: 20px;
+    left: 0;
+    top: 110px;
+  }
+  .abs {
+    margin-left: 88%;
+    margin-top: 50px;
   }
 
   &--header {
-    padding-top: 80px;
+    padding-top: 30px;
     margin-top: 10px;
     h4 {
       font-size: 2rem;
