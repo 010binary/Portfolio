@@ -2,6 +2,13 @@
 
 .project__section {
   padding-top: 10vh;
+  position: relative;
+
+  .project-side-design{
+    position: absolute;
+    right: 0;
+    top: 90%;
+  }
   & > img {
     margin-left: 20px;
   }
@@ -47,15 +54,19 @@
 
     &--projects {
       transition: 0.5s ease-in-out;
+      width: 32%;
+      background-color: $white;
+      box-shadow: -3px 3px 9px #b3b3b3, 3px -3px 9px #a5a5a5;
+
       &:hover {
         transform: scale(1.05);
+        box-shadow: -13px 13px 19px #b3b3b3, 13px -13px 19px #a5a5a5;
       }
       & > img {
-        height: 60%;
+        height: 70%;
         width: 100%;
       }
       .about-project {
-        background-color: $white;
         padding: 20px;
         cursor: pointer;
         border-radius: 8px;

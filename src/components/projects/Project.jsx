@@ -1,6 +1,6 @@
 import "./Project.scss";
 import { Portfolio1, Portfolio2, Portfolio3 } from "../Photos";
-import { Projects, Leftarrow, Right } from "../Icons";
+import { Projects, Leftarrow, Right, Design } from "../Icons";
 
 const Project = () => {
   const displayProject = [
@@ -33,8 +33,9 @@ const Project = () => {
   ));
   return (
     <div className="project__section">
-      <img src={Projects} alt="the Label for the project section" />
+      <img src={Design} alt="Side design" className="project-side-design" />
       <div className="container">
+        <img src={Projects} alt="the Label for the project section" />
         <div className="project__section--header">
           <h3>Featured Projects</h3>
           <div className="project__section--header--buttons">
