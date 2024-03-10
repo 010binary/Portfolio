@@ -1,5 +1,12 @@
 import "./Contact.scss";
-import { Phone, Message, Location, Contacts, Design } from "../Icons";
+import {
+  Phone,
+  Message,
+  Location,
+  Contacts,
+  Design,
+  ContactDesign,
+} from "../Icons";
 
 const Contact = () => {
   return (
@@ -91,6 +98,11 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <img
+        src={ContactDesign}
+        alt="Side design"
+        className="contact-side-design2"
+      />
     </div>
   );
 };

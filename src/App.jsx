@@ -1,10 +1,11 @@
 import "./App.scss";
-import Project from "./components/projects/Project";
+import Skill from "./Pages/Skill/Skill";
+
 
 function App() {
   return (
     <div>
-      <Project />
+      <Skill />
     </div>
   );
 }
