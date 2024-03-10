@@ -1,13 +1,14 @@
 import "./App.scss";
-import Contact from "./components/contact/Contact";
-
+import NarBar from "./components/navbar/NarBar";
 import Project from "./components/projects/Project";
+import Skills from "./components/skill/Skills";
 
 function App() {
   return (
     <div>
+      <NarBar/>
       <Project />
-      <Contact />
+      <Skills />
     </div>
   );
 }

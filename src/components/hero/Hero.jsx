@@ -1,10 +1,12 @@
 import "./Hero.scss";
-import { Instagram, Github, Twitter, Linkedin } from "../Icons";
+import { Instagram, Github, Twitter, Linkedin, Design} from "../Icons";
 import { HeroImg } from "../Photos";
 
 const Hero = () => {
   return (
     <div className="hero__section">
+      <img src={Design} alt="Side design" className="hero-side-design" />
+      <div className="container">
       <div className="hero__section--leftside">
         <h1>
           Augustine <span className="blue-text">Chukwuemeka.</span>
@@ -40,6 +42,7 @@ const Hero = () => {
       </div>
       <div className="hero__section--rightside">
         <img src={HeroImg} alt="My picture" />
+      </div>
       </div>
     </div>
   );

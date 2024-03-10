@@ -3,7 +3,7 @@ import "./NarBar.scss";
 
 const NarBar = () => {
   return (
-    <nav>
+    <nav className="container">
       <div className="logo">
         <img src={Logo} alt="My Logo" />
       </div>

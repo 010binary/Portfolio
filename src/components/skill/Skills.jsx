@@ -1,5 +1,5 @@
 import "./Skills.scss";
-import { SeeMore, Skill } from "../Icons";
+import { SeeMore, Skill, Design } from "../Icons";
 import { Html, Js, Python, React, Scss, Figma, GitHub, Flask } from "../Photos";
 
 const Skills = () => {
@@ -23,13 +23,16 @@ const Skills = () => {
 
   return (
     <div className="skill__section">
-      <img src={Skill} alt="" className="margin" />
-      <div className="skill__section-content">
-        <div className="row-1">{renderSkills.slice(0, 4)}</div>
-        <div className="row-2">{renderSkills.slice(4)}</div>
-      </div>
-      <div className="see-more">
-        <img src={SeeMore} alt="see more" />
+      <img src={Design} alt="Side design" className="skill-side-design" />
+      <div className="container">
+        <img src={Skill} alt="" className="margin" />
+        <div className="skill__section-content">
+          <div className="row-1">{renderSkills.slice(0, 4)}</div>
+          <div className="row-2">{renderSkills.slice(4)}</div>
+        </div>
+        <div className="see-more">
+          <img src={SeeMore} alt="see more" />
+        </div>
       </div>
     </div>
   );

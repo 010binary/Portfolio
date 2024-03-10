@@ -1,6 +1,13 @@
 @import "../../Scss/reset";
 .skill__section {
   padding: 5vh 0;
+  position: relative;
+
+  .skill-side-design {
+    position: absolute;
+    left: 0;
+    top: 100px;
+  }
 
   .margin {
     margin-left: 85%;
