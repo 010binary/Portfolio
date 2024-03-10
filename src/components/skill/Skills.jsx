@@ -31,7 +31,10 @@ const Skills = () => {
           <div className="row-2">{renderSkills.slice(4)}</div>
         </div>
         <div className="see-more">
-          <img src={SeeMore} alt="see more" />
+          <section>
+            <p>See more</p>
+            <img src={SeeMore} alt="see more" />
+          </section>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@
   }
 
   .margin {
-    margin-left: 85%;
+    margin-left: 89%;
   }
   &-content {
     padding: 5vh 0;
@@ -48,5 +48,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    section {
+      width: fit-content;
+      cursor: pointer;
+      transition: text-decoration 5s cubic-bezier(1, 0.4, 0.65, 0.92);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      font-family: $paragraph-font;
+      text-transform: capitalize;
+      padding-right: 5px;
+      display: inline;
+    }
   }
 }
