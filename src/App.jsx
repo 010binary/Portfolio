@@ -1,11 +1,11 @@
 import "./App.scss";
-import Skill from "./Pages/Skill/Skill";
+import Home from "./Pages/Home/Home";
 
 
 function App() {
   return (
     <div>
-      <Skill />
+      <Home />
     </div>
   );
 }
