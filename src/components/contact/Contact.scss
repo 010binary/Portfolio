@@ -21,7 +21,7 @@
 
   &--header {
     margin-top: 20px;
-    
+
     h4 {
       font-size: 2rem;
       font-family: $paragraph-font;
@@ -40,7 +40,7 @@
     margin-top: 30px;
 
     &--sidebar {
-      width: fit-content;
+      // width: fit-content;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -53,11 +53,15 @@
         align-items: center;
         text-decoration: none;
         color: $black;
+        background-color: $con-gray;
+        border-radius: 20px;
+        padding: 0 10px 0 0;
+        transition: 0.2s ease-in-out;
 
         .img {
           img {
             width: 70px;
-            height: 70px;
+            height: 100%;
           }
         }
 
@@ -73,6 +77,10 @@
             font-size: 15px;
             color: $gray;
           }
+        }
+        &:hover {
+          text-decoration: underline;
+          color: $primary-color;
         }
       }
     }

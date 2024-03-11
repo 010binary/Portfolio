@@ -13,7 +13,7 @@ const Contact = () => {
     <div className="contact__section">
       <img src={Design} alt="Side design" className="contact-side-design" />
       <div className="container">
-        <img src={Contacts} alt="design" className="abs" />
+        <img src={Contacts} alt="design" className="abs" id="hide"/>
         <div className="contact__section--header">
           <h4>
             Let’s Discuss Your <span className="blue-text">Project</span>

@@ -1,11 +1,11 @@
 import NavBar from "../../components/navbar/NarBar";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
-import "./Contacts.scss";
+import "./Abouts.scss";
 
-const Contacts = () => {
+const Abouts = () => {
   return (
-    <div id="Contact__page">
+    <div>
       <NavBar />
       <Contact />
       <Footer />
@@ -13,4 +13,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Abouts;
