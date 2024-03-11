@@ -17,6 +17,7 @@ nav {
     img {
       width: 60px;
       height: 60px;
+      margin-right: 50px;
     }
   }
   .navlinks {
@@ -30,7 +31,24 @@ nav {
         text-decoration: none;
         color: $black;
         font-size: 1.3rem;
+        font-weight: 500;
         font-family: $paragraph-font;
+        position: relative; /* Ensure proper positioning for pseudo-element */
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background-color: $primary-color; /* Or any color you want */
+          transition: width 0.5s ease-in-out; /* Adjust transition as needed */
+        }
+
+        &:hover::before {
+          width: 100%; /* Increase width on hover */
+        }
       }
     }
   }

@@ -1,0 +1,98 @@
+@import "../../Scss/reset";
+
+.mission-section {
+  h5 {
+    margin-top: 10px;
+    font-size: 3.5rem;
+    font-family: $syne-font;
+    border-bottom: 1px solid $gray;
+  }
+  &-texts {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    .right-side {
+      font-size: 3rem;
+      font-family: $syne-font;
+      font-weight: 800;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      width: 45%;
+    }
+
+    .left-side {
+      font-size: 1.3rem;
+      font-family: $paragraph-font;
+      width: 49%;
+      text-align: justify;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.5;
+    }
+  }
+
+  &-imgs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    .right-img {
+      width: 37%;
+      img {
+        width: 450px;
+        height: 434px;
+      }
+    }
+    .left-img {
+      width: 60%;
+      img {
+        margin-top: 10px;
+        width: 708px;
+        height: 424px;
+      }
+    }
+  }
+  &-socials {
+    padding: 10px 0 20px 0;
+    h5 {
+      font-size: 3rem;
+      border: none;
+      margin: 0;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      li {
+        list-style: none;
+        font-size: $syne-font;
+        font-size: 1.7rem;
+
+        text-transform: uppercase;
+        position: relative; /* Ensure proper positioning for pseudo-element */
+        a {
+          color: $primary-color;
+          text-decoration: none;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background-color: $primary-color; /* Or any color you want */
+          transition: width 0.5s ease-in-out; /* Adjust transition as needed */
+        }
+
+        &:hover::before {
+          width: 100%; /* Increase width on hover */
+        }
+      }
+    }
+  }
+}

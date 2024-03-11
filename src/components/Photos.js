@@ -11,6 +11,7 @@ import Js from "../imgs/Photos/JAVASCRIPT-LOGO.svg";
 import Python from "../imgs/Photos/PYTHON-LOGO.svg";
 import React from "../imgs/Photos/REACT-LOGO.svg";
 import Scss from "../imgs/Photos/SCSS-LOGO.svg";
+import SecImgs from "../imgs/Photos/SecImgs.webp";
 
 export {
   HeroImg,
@@ -26,4 +27,5 @@ export {
   Python,
   React,
   Scss,
+  SecImgs,
 };

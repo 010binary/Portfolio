@@ -7,7 +7,8 @@ const NarBar = () => {
       <div className="logo">
         <img src={Logo} alt="My Logo" />
       </div>
-      <div className="navlinks">
+
+      <ul className="navlinks">
         <li className="navlist routes">
           <a href="#" className="navlist__items">
             About
@@ -28,7 +29,8 @@ const NarBar = () => {
             Contact
           </a>
         </li>
-      </div>
+      </ul>
+
       <div className="navbtn">
         <div className="btn resume navbtn__resume">
           Resume <img src={Download} alt="Download svg" />
