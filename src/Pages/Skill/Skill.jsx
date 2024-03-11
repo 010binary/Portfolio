@@ -1,12 +1,21 @@
 import NavBar from "../../components/navbar/NarBar";
 import Skills from "../../components/skill/Skills";
+import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
+import "./Skill.scss";
 
 const Skill = () => {
   return (
-    <div>
+    <div id="skills-page">
       <NavBar />
-      {/* <Skills /> */}
+      <section className="skills-page-header container">
+        <h3>
+          My
+          <span className="blue-text"> Skills</span>
+        </h3>
+      </section>
+      <Skills numberOfSkills={16} />
+      <Contact />
       <Footer />
     </div>
   );

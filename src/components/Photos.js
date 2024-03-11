@@ -12,6 +12,14 @@ import Python from "../imgs/Photos/PYTHON-LOGO.svg";
 import React from "../imgs/Photos/REACT-LOGO.svg";
 import Scss from "../imgs/Photos/SCSS-LOGO.svg";
 import SecImgs from "../imgs/Photos/SecImgs.webp";
+import Git from "../imgs/Photos/GIT-LOGO.svg";
+import Affinity from "../imgs/Photos/AFFINITY-LOGO.svg";
+import Bootstrap from "../imgs/Photos/BOOTSRAP-LOGO.svg";
+import Css from "../imgs/Photos/CSS-LOGO.svg";
+import Mongo from "../imgs/Photos/MONGO-LOGO.svg";
+import Mysql from "../imgs/Photos/MYSQL-LOGO.svg";
+import Netlify from "../imgs/Photos/NELIFY-LOGO.svg";
+import Vercel from "../imgs/Photos/VERCEL-LOGO.svg";
 
 export {
   HeroImg,
@@ -28,4 +36,12 @@ export {
   React,
   Scss,
   SecImgs,
+  Git,
+  Affinity,
+  Bootstrap,
+  Css,
+  Mongo,
+  Mysql,
+  Netlify,
+  Vercel,
 };

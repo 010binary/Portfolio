@@ -1,0 +1,21 @@
+@import "../../Scss/reset";
+
+#skills-page {
+  .see-more,
+  .margin {
+    display: none;
+  }
+  .skill__section-content {
+    padding-top: 0;
+  }
+  .skills-page-header {
+    padding-top: 10px;
+    h3 {
+      margin-top: 10px;
+      font-size: 3rem;
+      letter-spacing: 1.5px;
+      font-family: $syne-font;
+      border-bottom: 1px solid $gray;
+    }
+  }
+}

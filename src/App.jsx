@@ -1,12 +1,10 @@
 import "./App.scss";
-
-import ProjectDetail from "./Pages/ProjectDetail/ProjectDetail";
+import Skill from "./Pages/Skill/Skill";
 
 function App() {
   return (
     <div>
-      <ProjectDetail />
-     
+      <Skill />
     </div>
   );
 }
