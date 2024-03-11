@@ -1,0 +1,16 @@
+@import "../../Scss/reset";
+
+#project-detail-page {
+  .project-Top-design {
+    display: none;
+  }
+  .project__section {
+    padding-top: 20px;
+    &--header {
+      padding-top: 30px;
+      h3 {
+        font-family: $syne-font;
+      }
+    }
+  }
+}
