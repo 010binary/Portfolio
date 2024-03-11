@@ -2,12 +2,18 @@
 @import "../../Scss/buttons";
 
 nav {
-  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  position: sticky;
+  top: 0px;
+  background-color: $background;
+  z-index: 2;
+
   .logo {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
     img {
       width: 60px;
       height: 60px;
