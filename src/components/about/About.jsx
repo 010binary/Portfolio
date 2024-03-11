@@ -1,6 +1,7 @@
 import "./About.scss";
 import { AboutMe, Lightbulb, Music, Design } from "../Icons";
 import { AboutmeImg } from "../Photos";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -27,7 +28,7 @@ const About = () => {
             <p className="about__section--description">
               Aaronn is a New York-based visual designer focusing on branding
               and visual identity. Her portfolio showcases her wide range of
-              work, spanning books, posters and web design. <b>Read more</b>
+              work, spanning books, posters and web design. <b><Link to="/about">Read more</Link> </b>
             </p>
             <img src={Music} alt="Creative Music design" className="music" />
           </div>

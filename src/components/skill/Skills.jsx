@@ -18,6 +18,7 @@ import {
   Netlify,
   Vercel,
 } from "../Photos";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Skills = ({ numberOfSkills = 4 }) => {
@@ -76,8 +77,9 @@ const Skills = ({ numberOfSkills = 4 }) => {
         <div className="skill__section-content">{renderRows()}</div>
         <div className="see-more">
           <section>
+            <Link to="/skills">
             <p>See more</p>
-            <img src={SeeMore} alt="see more" />
+            <img src={SeeMore} alt="see more" /></Link>
           </section>
         </div>
       </div>

@@ -13,7 +13,7 @@ const Home = () => {
         <NavBar />
         <Hero />
         <About />
-        <Skills />
+        <Skills numberOfSkills={8} />
         <Project projectsToShow={3} title={<h3>Featured Projects</h3>} />
         <Contact />
         <Footer />

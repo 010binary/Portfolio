@@ -1,6 +1,7 @@
 import "./Project.scss";
 import { Portfolio1, Portfolio2, Portfolio3 } from "../Photos";
 import { Projects, Leftarrow, Right, Design } from "../Icons";
+// import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Project = ({ projectsToShow, title }) => {

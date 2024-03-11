@@ -33,16 +33,16 @@ const Mission = () => {
         <h5>Follow me on:</h5>
         <ul>
           <li className="linkedin">
-            <a href="#">linkedin</a>
+            <a href="https://www.linkedin.com/in/alpha-augustine/">linkedin</a>
           </li>
           <li className="Twitter">
-            <a href="#">Twitter</a>
+            <a href="https://twitter.com/August13200296">Twitter</a>
           </li>
           <li className="Facebook">
-            <a href="#">Facebook</a>
+            <a href="https://www.facebook.com/augustine.emeka.1253">Facebook</a>
           </li>
           <li className="Instagram">
-            <a href="#">Instagram</a>
+            <a href="https://www.instagram.com/10_binary/">Instagram</a>
           </li>
         </ul>
       </section>
