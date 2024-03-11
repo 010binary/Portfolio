@@ -18,6 +18,7 @@ nav {
       width: 60px;
       height: 60px;
       margin-right: 50px;
+      cursor: pointer;
     }
   }
   .navlinks {
@@ -27,11 +28,12 @@ nav {
 
     .navlist {
       list-style: none;
-      a {
+
+      &__items {
         text-decoration: none;
         color: $black;
-        font-size: 1.3rem;
-        font-weight: 500;
+        font-size: 1.2rem;
+        font-weight: 400;
         font-family: $paragraph-font;
         position: relative; /* Ensure proper positioning for pseudo-element */
 
@@ -46,8 +48,17 @@ nav {
           transition: width 0.5s ease-in-out; /* Adjust transition as needed */
         }
 
-        &:hover::before {
+        &:hover:not(.active)::before {
           width: 100%; /* Increase width on hover */
+        }
+      }
+
+      &__items.active {
+        font-size: 1.3rem;
+        font-weight: 500;
+
+        &::before {
+          width: 100%; /* Ensure underline when active */
         }
       }
     }

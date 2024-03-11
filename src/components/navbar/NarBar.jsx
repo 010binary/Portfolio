@@ -1,33 +1,36 @@
 import { Logo, Download } from "../Icons";
+import { NavLink } from "react-router-dom";
 import "./NarBar.scss";
 
 const NarBar = () => {
   return (
     <nav className="container">
       <div className="logo">
-        <img src={Logo} alt="My Logo" />
+        <NavLink to="/home">
+          <img src={Logo} alt="My Logo" />
+        </NavLink>
       </div>
 
       <ul className="navlinks">
         <li className="navlist routes">
-          <a href="#" className="navlist__items">
+          <NavLink to="/about" className="navlist__items">
             About
-          </a>
+          </NavLink>
         </li>
         <li className="navlist routes">
-          <a href="#" className="navlist__items">
+          <NavLink to="/skills" className="navlist__items">
             Skills
-          </a>
+          </NavLink>
         </li>
         <li className="navlist routes">
-          <a href="#" className="navlist__items">
+          <NavLink to="/project" className="navlist__items">
             Project
-          </a>
+          </NavLink>
         </li>
         <li className="navlist routes">
-          <a href="#" className="navlist__items">
+          <NavLink to="/contact" className="navlist__items">
             Contact
-          </a>
+          </NavLink>
         </li>
       </ul>
 
