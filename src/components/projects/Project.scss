@@ -3,8 +3,9 @@
 .project__section {
   padding-top: 10vh;
   position: relative;
+  overflow: hidden;
 
-  .project-side-design{
+  .project-side-design {
     position: absolute;
     right: 0;
     top: 90%;
@@ -53,7 +54,7 @@
     flex-wrap: wrap;
     gap: 22px;
     margin-top: 20px;
-
+    transition: transform 0.3s ease;
     &--projects {
       transition: 0.5s ease-in-out;
       width: 32%;

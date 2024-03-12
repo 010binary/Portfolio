@@ -1,6 +1,7 @@
 import "./Project.scss";
 import { Portfolio1, Portfolio2, Portfolio3 } from "../Photos";
 import { Projects, Leftarrow, Right, Design } from "../Icons";
+import { useState } from "react";
 // import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
@@ -37,8 +38,19 @@ const Project = ({ projectsToShow, title }) => {
       languages: ["React", "Flask"],
     },
   ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleLeftClick = () => {
+    setCurrentIndex(Math.max(currentIndex - 1, 0)); // Clamp to prevent negative index
+  };
+
+  const handleRightClick = () => {
+    setCurrentIndex(
+      Math.min(currentIndex + 1, displayProject.length - projectsToShow) // Clamp to prevent overflow
+    );
+  };
   const renderProject = displayProject
-    .slice(0, projectsToShow)
+    .slice(currentIndex, currentIndex + projectsToShow)
     .map((project) => (
       <div key={project.name} className="project__section--content--projects">
         <img src={project.img} alt={`project image for ${project.name}`} />
@@ -66,10 +78,18 @@ const Project = ({ projectsToShow, title }) => {
         <div className="project__section--header">
           {title}
           <div className="project__section--header--buttons">
-            <button className="left-btn">
+            <button
+              className="left-btn"
+              disabled={currentIndex === 0}
+              onClick={handleLeftClick}
+            >
               <img src={Leftarrow} alt="An arrow indicating left scroll" />
             </button>
-            <button className="right-btn">
+            <button
+              className="right-btn"
+              disabled={currentIndex === displayProject.length - projectsToShow}
+              onClick={handleRightClick}
+            >
               <img src={Right} alt="An arrow indicating Right scroll" />
             </button>
           </div>
