@@ -64,10 +64,58 @@
       &:hover {
         transform: scale(1.05);
         box-shadow: -13px 13px 19px #b3b3b3, 13px -13px 19px #a5a5a5;
+        .image-project {
+          .overlay {
+            bottom: 0;
+            height: 100%;
+          }
+        }
       }
-      & > img {
+      .image-project {
         height: 70%;
         width: 100%;
+        position: relative;
+
+        & > img {
+          height: 100%;
+          width: 100%;
+        }
+
+        .overlay {
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          right: 0;
+          /*from bottom
+          bottom: 0;
+          left: 0;
+          right: 0;*/
+          /*from right
+          bottom: 0;
+          left: 100%;
+          right: 0;*/
+          /*bottom: 0;
+          left: 0;
+          right: 0;*/
+          background-color: $overlay-gray;
+          overflow: hidden;
+          width: 100%;
+          height: 0;
+          transition: 0.5s ease;
+
+          .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: $primary-color;
+            color: $black;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 16px 32px;
+          }
+        }
       }
       .about-project {
         padding: 20px;

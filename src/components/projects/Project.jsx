@@ -2,6 +2,7 @@ import "./Project.scss";
 import { Portfolio1, Portfolio2, Portfolio3 } from "../Photos";
 import { Projects, Leftarrow, Right, Design } from "../Icons";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
@@ -38,6 +39,7 @@ const Project = ({ projectsToShow, title }) => {
       languages: ["React", "Flask"],
     },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleLeftClick = () => {
@@ -49,11 +51,19 @@ const Project = ({ projectsToShow, title }) => {
       Math.min(currentIndex + 1, displayProject.length - projectsToShow) // Clamp to prevent overflow
     );
   };
+
   const renderProject = displayProject
     .slice(currentIndex, currentIndex + projectsToShow)
     .map((project) => (
       <div key={project.name} className="project__section--content--projects">
-        <img src={project.img} alt={`project image for ${project.name}`} />
+        <section className="image-project">
+          <img src={project.img} alt={`project image for ${project.name}`} />
+          <div className="overlay">
+            <Link to="/project/details" className="text">
+              Visit
+            </Link>
+          </div>
+        </section>
         <section className="about-project">
           <p className="project-name">{project.name}</p>
           <section className="project-decription">
@@ -66,6 +76,7 @@ const Project = ({ projectsToShow, title }) => {
         </section>
       </div>
     ));
+
   return (
     <div className="project__section">
       <img src={Design} alt="Side design" className="project-side-design" />
