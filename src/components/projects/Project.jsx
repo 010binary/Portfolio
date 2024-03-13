@@ -1,7 +1,7 @@
 import "./Project.scss";
 import PropTypes from "prop-types";
 import { Portfolio1, Portfolio2, Portfolio3 } from "../Photos";
-import { Projects, Leftarrow, Right, Design } from "../Icons";
+import { Projects, Right, Design } from "../Icons"; // Leftarrow,
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BaseSkeleton from "../skeleton/BaseSkeleton";
@@ -133,7 +133,7 @@ const Project = ({ projectsToShow, title }) => {
                   disabled={currentIndex === 0}
                   onClick={handleLeftClick}
                 >
-                  <img src={Leftarrow} alt="An arrow indicating left scroll" />
+                  <img src={Right} alt="An arrow indicating left scroll" />
                 </button>
                 <button
                   className="right-btn"
