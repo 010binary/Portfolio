@@ -1,7 +1,7 @@
 import "./Project.scss";
 import PropTypes from "prop-types";
 import { Portfolio1, Portfolio2, Portfolio3 } from "../Photos";
-import { Projects, Design } from "../Icons"; // Leftarrow, Right, 
+import { Projects, Design, Right } from "../Icons"; // Leftarrow, , 
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BaseSkeleton from "../skeleton/BaseSkeleton";
@@ -142,7 +142,7 @@ const Project = ({ projectsToShow, title }) => {
                   }
                   onClick={handleRightClick}
                 >
-                  {/* <img src={Right} alt="An arrow indicating Right scroll" /> */}
+                  <img src={Right} alt="An arrow indicating Right scroll" />
                 </button>
               </div>
             </>
