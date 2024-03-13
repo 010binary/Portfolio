@@ -2,20 +2,18 @@
 
 #project-page {
   .project__section {
-    padding-top: 1.5vh;
+    padding-top: 0;
     &--header {
       border-bottom: 1px solid $gray;
+      margin-top: 80px;
       h3 {
         font-size: 3rem;
         letter-spacing: 10px;
         font-family: $syne-font;
-        padding-bottom: 1vh;
       }
     }
 
-    &--header--buttons {
-      display: none;
-    }
+    &--header--buttons,
     .project-Top-design {
       display: none;
     }

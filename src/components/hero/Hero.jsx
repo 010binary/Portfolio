@@ -2,7 +2,7 @@ import "./Hero.scss";
 import { Instagram, Github, Twitter, Linkedin, Design } from "../Icons";
 import { HeroImg } from "../Photos";
 import { Link } from "react-router-dom";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+// import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -59,19 +59,17 @@ const Hero = () => {
         </div>
         <div className="hero__section--rightside">
           {loadingImages ? (
-            <SkeletonTheme
-              baseColor="#202020"
-              highlightColor="#444"
+            <div
               style={{
-                // backgroundColor: "#000",
+                backgroundColor: "#000",
                 padding: "20px",
                 borderRadius: "10px",
                 width: "100%",
                 height: "100%",
               }}
             >
-              <Skeleton height={"100%"} width={"100%"} inline={true} />
-            </SkeletonTheme>
+              {/* <Skeleton height={"100%"} width={"100%"} inline={true} /> */}
+            </div>
           ) : (
             <img src={HeroImg} alt="My picture" />
           )}
