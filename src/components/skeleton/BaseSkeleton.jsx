@@ -1,9 +1,13 @@
-import React from 'react'
+import PropTypes from 'prop-types';
+import "./BaseSkeleton.scss"
 
-const BaseSkeleton = () => {
-  return (
-    <div>BaseSkeleton</div>
-  )
-}
+const BaseSkeleton = ({ type }) => {
+  const classes = `skeleton ${type}`;
+  return <div className={classes}></div>;
+};
 
-export default BaseSkeleton
+BaseSkeleton.propTypes = {
+  type: PropTypes.string.isRequired,
+};
+
+export default BaseSkeleton;

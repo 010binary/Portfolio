@@ -1,11 +1,11 @@
 import "./Project.scss";
+import PropTypes from "prop-types";
 import { Portfolio1, Portfolio2, Portfolio3 } from "../Photos";
 import { Projects, Leftarrow, Right, Design } from "../Icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
-// eslint-disable-next-line react/prop-types
 const Project = ({ projectsToShow, title }) => {
   const displayProject = [
     {
@@ -110,5 +110,8 @@ const Project = ({ projectsToShow, title }) => {
     </div>
   );
 };
-
+Project.propTypes = {
+  projectsToShow: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+};
 export default Project;
