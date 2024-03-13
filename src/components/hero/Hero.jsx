@@ -15,7 +15,7 @@ const Hero = () => {
     const timeout = setTimeout(() => {
       setLoadingImages(false);
       setLoadingtext(false);
-    }, 1000);
+    }, 500);
 
     // Clear timeout on component unmount
     return () => clearTimeout(timeout);
