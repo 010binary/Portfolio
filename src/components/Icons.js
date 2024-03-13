@@ -14,7 +14,7 @@ import Location from "../imgs/icons/Location-icon.svg";
 import Message from "../imgs/icons/Message-icon.svg";
 import Music from "../imgs/icons/Music-icon.svg";
 import Phone from "../imgs/icons/Phone-icon.svg";
-import Right from "../imgs/icons/Right.svg";
+// import Right from "../imgs/icons/Right.svg";
 import SeeMore from "../imgs/icons/See-more.svg";
 import Design from "../imgs/icons/Side-design.svg";
 import Skill from "../imgs/icons/Skills-label.svg";
@@ -40,7 +40,7 @@ export {
   Message,
   Music,
   Phone,
-  Right,
+  // Right,
   SeeMore,
   Design,
   Skill,
