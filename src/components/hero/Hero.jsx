@@ -2,7 +2,6 @@ import "./Hero.scss";
 import { Instagram, Github, Twitter, Linkedin, Design } from "../Icons";
 import { HeroImg } from "../Photos";
 import { Link } from "react-router-dom";
-// import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { useEffect, useState } from "react";
 import SkeletonImage from "../skeleton/Skeletonimage";
 import SkeletonArticle from "../skeleton/SkeletonArticle";
