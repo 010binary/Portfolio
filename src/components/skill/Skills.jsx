@@ -32,7 +32,7 @@ const Skills = ({ numberOfSkills = 4 }) => {
     const timeout = setTimeout(() => {
       setLoading(false);
       setLoadingImages(false);
-    }, 5000);
+    }, 1000);
 
     // Clear timeout on component unmount
     return () => clearTimeout(timeout);

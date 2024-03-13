@@ -16,7 +16,7 @@ const Project = ({ projectsToShow, title }) => {
     const timeout = setTimeout(() => {
       setLoading(false);
       setLoadingImages(false);
-    }, 50);
+    }, 1000);
 
     // Clear timeout on component unmount
     return () => clearTimeout(timeout);
