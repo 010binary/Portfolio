@@ -1,4 +1,7 @@
+/* eslint-disable no-undef */
 import "./Contact.scss";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Phone,
   Message,
@@ -9,11 +12,34 @@ import {
 } from "../Icons";
 
 const Contact = () => {
+  const serviceKey = import.meta.env.VITE_SERVICE_ID;
+  const templateKey = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(serviceKey, templateKey, form.current, {
+        publicKey: publicKey,
+      })
+      .then(
+        () => {
+          alert("Message sent successfully Thank you🙂");
+          e.target.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Error sending message please try again, Thank you🙂");
+        }
+      );
+  };
   return (
     <div className="contact__section">
       <img src={Design} alt="Side design" className="contact-side-design" />
       <div className="container">
-        <img src={Contacts} alt="design" className="abs" id="hide"/>
+        <img src={Contacts} alt="design" className="abs" id="hide" />
         <div className="contact__section--header">
           <h4>
             Let’s Discuss Your <span className="blue-text">Project</span>
@@ -59,27 +85,42 @@ const Contact = () => {
             </a>
           </div>
           <div className="contact__section--content--form">
-            <form className="form">
+            <form className="form" ref={form} onSubmit={sendEmail}>
               <div className="flex">
                 <label>
-                  <input className="input" type="text" required />
+                  <input
+                    className="input"
+                    type="text"
+                    name="user_name"
+                    required
+                  />
                   <span>Fullname</span>
                 </label>
 
                 <label>
-                  <input className="input" type="email" required />
+                  <input
+                    className="input"
+                    type="email"
+                    name="user_email"
+                    required
+                  />
                   <span>Email</span>
                 </label>
               </div>
 
               <div className="flex">
                 <label>
-                  <input className="input" type="tel" required />
+                  <input
+                    className="input"
+                    type="tel"
+                    name="phone_number"
+                    required
+                  />
                   <span>Phone number</span>
                 </label>
 
                 <label>
-                  <input className="input" type="text" required />
+                  <input className="input" type="text" name="Topic" required />
                   <span>Topic</span>
                 </label>
               </div>
@@ -93,7 +134,7 @@ const Contact = () => {
                 ></textarea>
                 <span>Message</span>
               </label>
-              <button className="submit">Submit</button>
+              <input type="submit" value="Submit" className="submit" />
             </form>
           </div>
         </div>

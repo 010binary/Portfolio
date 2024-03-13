@@ -2,8 +2,22 @@ import "./Hero.scss";
 import { Instagram, Github, Twitter, Linkedin, Design } from "../Icons";
 import { HeroImg } from "../Photos";
 import { Link } from "react-router-dom";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [loadingImages, setLoadingImages] = useState(true);
+
+  // Simulating image loading delay
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoadingImages(false);
+    }, 3000);
+
+    // Clear timeout on component unmount
+    return () => clearTimeout(timeout);
+  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+
   return (
     <div className="hero__section">
       <img src={Design} alt="Side design" className="hero-side-design" />
@@ -39,11 +53,28 @@ const Hero = () => {
           </section>
           <section className="hero-button">
             <Link to="/contact">
-            <button>Hire me</button></Link>
+              <button>Hire me</button>
+            </Link>
           </section>
         </div>
         <div className="hero__section--rightside">
-          <img src={HeroImg} alt="My picture" />
+          {loadingImages ? (
+            <SkeletonTheme
+              baseColor="#202020"
+              highlightColor="#444"
+              style={{
+                // backgroundColor: "#000",
+                padding: "20px",
+                borderRadius: "10px",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              <Skeleton height={"100%"} width={"100%"} inline={true} />
+            </SkeletonTheme>
+          ) : (
+            <img src={HeroImg} alt="My picture" />
+          )}
         </div>
       </div>
     </div>
