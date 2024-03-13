@@ -19,9 +19,25 @@ import {
   Vercel,
 } from "../Photos";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import BaseSkeleton from "../skeleton/BaseSkeleton";
+import SkeletonImage from "../skeleton/Skeletonimage";
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 const Skills = ({ numberOfSkills = 4 }) => {
+  const [loading, setLoading] = useState(true);
+  const [loadingImages, setLoadingImages] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+      setLoadingImages(false);
+    }, 5000);
+
+    // Clear timeout on component unmount
+    return () => clearTimeout(timeout);
+  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+
   const skillsList = [
     { name: "Html5", img: Html },
     { name: "Scss", img: Scss },
@@ -48,8 +64,16 @@ const Skills = ({ numberOfSkills = 4 }) => {
   const renderSkills = (skills) =>
     skills.map((skill) => (
       <div key={skill.name} className={`${skill.name} skill-img `}>
-        <img src={skill.img} alt={`An image of ${skill.name}`} />
-        <p className={skill.name}>{skill.name}</p>
+        {loadingImages ? (
+          <>
+            <SkeletonImage dimension={{ width: 120, height: 129.33 }} />
+          </>
+        ) : (
+          <>
+            <img src={skill.img} alt={`An image of ${skill.name}`} />
+            <p className={skill.name}>{skill.name}</p>
+          </>
+        )}
       </div>
     ));
 
@@ -76,15 +100,29 @@ const Skills = ({ numberOfSkills = 4 }) => {
         <img src={Skill} alt="" className="margin" />
         <div className="skill__section-content">{renderRows()}</div>
         <div className="see-more">
-          <section>
-            <Link to="/skills">
-            <p>See more</p>
-            <img src={SeeMore} alt="see more" /></Link>
-          </section>
+          {loading ? (
+            <div
+              style={{
+                width: "10%",
+              }}
+            >
+              <BaseSkeleton type="text" />
+            </div>
+          ) : (
+            <section>
+              <Link to="/skills">
+                <p>See more</p>
+                <img src={SeeMore} alt="see more" />
+              </Link>
+            </section>
+          )}
         </div>
       </div>
     </div>
   );
+};
+Skills.propTypes = {
+  numberOfSkills: PropTypes.object.isRequired,
 };
 
 export default Skills;
