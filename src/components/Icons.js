@@ -6,7 +6,7 @@ import Github from "../imgs/icons/Github-icon.svg";
 import GithubFooter from "../imgs/icons/Github-footer.svg";
 import Instagram from "../imgs/icons/Instagram-icon.svg";
 import InstagramFooter from "../imgs/icons/Instragram-footer.svg";
-import Leftarrow from "../imgs/icons/Left.svg";
+import Leftarrow from "/src/imgs/icons/Left.svg";
 import Lightbulb from "../imgs/icons/Lightbulb-icon.svg";
 import Linkedin from "../imgs/icons/Linkedin-icon.svg";
 import LinkedinFooter from "../imgs/icons/Linkedin-footer.svg";
