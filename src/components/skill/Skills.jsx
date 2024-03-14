@@ -17,6 +17,19 @@ import {
   Mysql,
   Netlify,
   Vercel,
+  GitLab,
+  Kubernetes,
+  Docker,
+  PostgreSql,
+  Selenium,
+  Jest,
+  Django,
+  AWS,
+  FastApi,
+  NextJs,
+  NodeJs,
+  CLang,
+  Bash,
 } from "../Photos";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -39,6 +52,19 @@ const Skills = ({ numberOfSkills = 4 }) => {
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
   const skillsList = [
+    { name: "GitLab", img: GitLab },
+    { name: "Kubernetes", img: Kubernetes },
+    { name: "Docker", img: Docker },
+    { name: "PostgreSql", img: PostgreSql },
+    { name: "Jest", img: Jest },
+    { name: "Django", img: Django },
+    { name: "FastApi", img: FastApi },
+    { name: "NextJs", img: NextJs },
+    { name: "AWS", img: AWS },
+    { name: "NodeJs", img: NodeJs },
+    { name: "CLang", img: CLang },
+    { name: "Bash", img: Bash },
+    { name: "Selenium", img: Selenium },
     { name: "Html5", img: Html },
     { name: "Scss", img: Scss },
     { name: "Javascript", img: Js },

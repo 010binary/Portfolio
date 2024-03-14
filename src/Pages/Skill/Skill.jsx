@@ -14,7 +14,7 @@ const Skill = () => {
           <span className="blue-text"> Skills</span>
         </h3>
       </section>
-      <Skills numberOfSkills={16} />
+      <Skills numberOfSkills={28} />
       <Contact />
       <Footer />
     </div>
