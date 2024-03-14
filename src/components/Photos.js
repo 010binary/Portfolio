@@ -20,6 +20,19 @@ import Mongo from "../imgs/Photos/MONGO-LOGO.svg";
 import Mysql from "../imgs/Photos/MYSQL-LOGO.svg";
 import Netlify from "../imgs/Photos/NELIFY-LOGO.svg";
 import Vercel from "../imgs/Photos/VERCEL-LOGO.svg";
+import GitLab from "../imgs/Photos/GitLab.svg";
+import Kubernetes from "../imgs/Photos/Kubernetes.svg";
+import Docker from "../imgs/Photos/Docker.svg";
+import PostgreSql from "../imgs/Photos/PostgreSql.svg";
+import Selenium from "../imgs/Photos/Selenium.svg";
+import Jest from "../imgs/Photos/Jest.svg";
+import Django from "../imgs/Photos/Django.svg";
+import AWS from "../imgs/Photos/AWS.svg";
+import FastApi from "../imgs/Photos/FastApi.svg";
+import NextJs from "../imgs/Photos/NextJs.svg";
+import NodeJs from "../imgs/Photos/NodeJs.svg";
+import CLang from "../imgs/Photos/C-Lang.svg";
+import Bash from "../imgs/Photos/Bash.svg";
 
 export {
   HeroImg,
@@ -44,4 +57,17 @@ export {
   Mysql,
   Netlify,
   Vercel,
+  GitLab,
+  Kubernetes,
+  Docker,
+  PostgreSql,
+  Selenium,
+  Jest,
+  Django,
+  AWS,
+  FastApi,
+  NextJs,
+  NodeJs,
+  CLang,
+  Bash,
 };
