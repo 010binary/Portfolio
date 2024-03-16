@@ -12,6 +12,8 @@ const LazyProjectDetail = React.lazy(() =>
   import("./Pages/ProjectDetail/ProjectDetail")
 );
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 function App() {
   return (
@@ -40,6 +42,7 @@ function App() {
         <Route path="skills" element={<Skill />} />
         <Route path="*" element={<Home />} />
       </Routes>
+      <SpeedInsights />
       <Analytics />
     </div>
   );
