@@ -11,10 +11,11 @@ import SkeletonArticle from "./components/skeleton/SkeletonArticle";
 const LazyProjectDetail = React.lazy(() =>
   import("./Pages/ProjectDetail/ProjectDetail")
 );
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
-    <div>
+    <div className="entry">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -39,6 +40,7 @@ function App() {
         <Route path="skills" element={<Skill />} />
         <Route path="*" element={<Home />} />
       </Routes>
+      <Analytics />
     </div>
   );
 }

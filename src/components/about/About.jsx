@@ -14,7 +14,7 @@ const About = () => {
     const timeout = setTimeout(() => {
       setLoadingImages(false);
       setLoadingtext(false);
-    }, 500);
+    }, 300);
     // Clear timeout on component unmount
     return () => clearTimeout(timeout);
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
