@@ -52,12 +52,21 @@ const Skills = ({ numberOfSkills = 4 }) => {
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
   const skillsList = [
+    { name: "Python", img: Python },
+    { name: "Javascript", img: Js },
+    { name: "Html5", img: Html },
+    { name: "CSS3", img: Css },
+    { name: "React", img: React },
+    { name: "Django", img: Django },
+    { name: "Git", img: Git },
+    { name: "MongoDb", img: Mongo },
+    { name: "Docker", img: Docker },
+    { name: "Vercel", img: Vercel },
+    { name: "PostgreSql", img: PostgreSql },
+    { name: "Flask", img: Flask },
     { name: "GitLab", img: GitLab },
     { name: "Kubernetes", img: Kubernetes },
-    { name: "Docker", img: Docker },
-    { name: "PostgreSql", img: PostgreSql },
     { name: "Jest", img: Jest },
-    { name: "Django", img: Django },
     { name: "FastApi", img: FastApi },
     { name: "NextJs", img: NextJs },
     { name: "AWS", img: AWS },
@@ -65,22 +74,13 @@ const Skills = ({ numberOfSkills = 4 }) => {
     { name: "CLang", img: CLang },
     { name: "Bash", img: Bash },
     { name: "Selenium", img: Selenium },
-    { name: "Html5", img: Html },
     { name: "Scss", img: Scss },
-    { name: "Javascript", img: Js },
-    { name: "React", img: React },
     { name: "Figma", img: Figma },
     { name: "GitHub", img: GitHub },
-    { name: "Python", img: Python },
-    { name: "Flask", img: Flask },
-    { name: "Git", img: Git },
     { name: "Affinity", img: Affinity },
     { name: "Bootrap", img: Bootstrap },
-    { name: "CSS3", img: Css },
-    { name: "MongoDb", img: Mongo },
     { name: "SQl", img: Mysql },
     { name: "Netlify", img: Netlify },
-    { name: "Vercel", img: Vercel },
   ];
 
   const getNumberOfRows = () => {
@@ -148,7 +148,7 @@ const Skills = ({ numberOfSkills = 4 }) => {
   );
 };
 Skills.propTypes = {
-  numberOfSkills: PropTypes.object.isRequired,
+  numberOfSkills: PropTypes.number.isRequired,
 };
 
 export default Skills;

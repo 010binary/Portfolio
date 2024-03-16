@@ -25,31 +25,37 @@ const Project = ({ projectsToShow, title }) => {
   const displayProject = [
     {
       name: "Agency website.",
+      key: "94583",
       img: Portfolio1,
       languages: ["React", "Flask"],
     },
     {
       name: "Dashboard website.",
+      key: "384945",
       img: Portfolio2,
       languages: ["React", "Flask"],
     },
     {
       name: "Support Center website.",
+      key: "904958",
       img: Portfolio3,
       languages: ["React", "Flask"],
     },
     {
-      name: "Agency websites.",
+      name: "hard work ",
+      key: "233244",
       img: Portfolio1,
       languages: ["React", "Flask"],
     },
     {
-      name: "Dashboard websites.",
+      name: "Ecommeres",
+      key: "569558",
       img: Portfolio2,
       languages: ["React", "Flask"],
     },
     {
-      name: "Support Center websites.",
+      name: "Another project",
+      key: "748589",
       img: Portfolio3,
       languages: ["React", "Flask"],
     },
@@ -67,7 +73,7 @@ const Project = ({ projectsToShow, title }) => {
 
   const renderProject = displayProject
     .slice(currentIndex, currentIndex + projectsToShow)
-    .map((project) => (
+    .map((project, index) => (
       <>
         {loadingImages ? (
           <>
@@ -76,7 +82,7 @@ const Project = ({ projectsToShow, title }) => {
         ) : (
           <>
             <div
-              key={project.name}
+              key={project.key + index}
               className="project__section--content--projects"
             >
               <section className="image-project">
@@ -155,6 +161,6 @@ const Project = ({ projectsToShow, title }) => {
 };
 Project.propTypes = {
   projectsToShow: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
 };
 export default Project;
