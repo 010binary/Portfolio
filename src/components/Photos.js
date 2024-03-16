@@ -3,6 +3,9 @@ import AboutmeImg from "../imgs/Photos/About-me.webp";
 import Portfolio1 from "../imgs/Photos/Portfolio-item1.webp";
 import Portfolio2 from "../imgs/Photos/Portfolio-item2.webp";
 import Portfolio3 from "../imgs/Photos/Portfolio-item3.webp";
+import Portfolio4 from "../imgs/Photos/Portfolio-item4.webp";
+import Portfolio5 from "../imgs/Photos/Portfolio-item5.webp";
+import Portfolio6 from "../imgs/Photos/Portfolio-item6.webp";
 import Figma from "../imgs/Photos/FIGMA-LOGO.svg";
 import Flask from "../imgs/Photos/FLASK-LOGO.svg";
 import GitHub from "../imgs/Photos/GITHUB-LOGO.svg";
@@ -40,6 +43,9 @@ export {
   Portfolio1,
   Portfolio2,
   Portfolio3,
+  Portfolio4,
+  Portfolio5,
+  Portfolio6,
   Figma,
   Flask,
   GitHub,
