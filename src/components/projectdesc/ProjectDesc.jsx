@@ -1,27 +1,29 @@
-import { Portfolio1 } from "../Photos";
 import "./ProjectDesc.scss";
 import SkeletonArticle from "../skeleton/SkeletonArticle";
 import SkeletonImage from "../skeleton/Skeletonimage";
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import BaseSkeleton from "../skeleton/BaseSkeleton";
+import Projectdata from "../Projectdata";
 
-const ProjectDesc = () => {
-  const [loadingImages, setLoadingImages] = useState(true);
-  const [loadingtext, setLoadingtext] = useState(true);
-  // Simulating image loading delay
+const ProjectDesc = ({ projectId }) => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setLoadingImages(false);
-      setLoadingtext(false);
+      setLoading(false);
     }, 500);
     // Clear timeout on component unmount
     return () => clearTimeout(timeout);
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
+  // Find the project with matching ID
+  const project = Projectdata.find((project) => project.id === projectId);
+
   return (
     <div className="container project-desc">
       <h3>
-        {loadingtext ? (
+        {loading ? (
           <BaseSkeleton type="title" />
         ) : (
           <>
@@ -31,50 +33,26 @@ const ProjectDesc = () => {
         )}
       </h3>
       <section className="project-desc-img">
-        {loadingImages ? (
+        {loading ? (
           <SkeletonImage dimension={{ width: 1000, height: 400 }} />
         ) : (
-          <img src={Portfolio1} alt="A picture about my project" />
+          <img src={project.img} alt={`Project ${project.name}`} />
         )}
       </section>
       <section className="project-desc-txt">
-        {loadingtext ? (
+        {loading ? (
           <SkeletonArticle numberOfLines={10} />
         ) : (
           <>
-            <h6 className="project-desc-header">Project Story</h6>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-              quibusdam nobis quisquam a tempore quos assumenda necessitatibus
-              labore sed accusantium tempora corporis molestiae, illum accusamus
-              enim ad! Ipsa atque ex inventore magnam mollitia expedita ipsum
-              hic est sint nulla cum, molestiae vel obcaecati architecto
-              necessitatibus beatae dicta voluptatem nesciunt debitis
-              laudantium. Iusto asperiores vero explicabo eius id illo. Hic
-              vitae esse odit qui officia asperiores laboriosam velit porro
-              nobis dolores. Totam nesciunt quibusdam mollitia repudiandae quae
-              impedit dolor at incidunt, commodi magni tempora odio error
-              sapiente neque, voluptatem minima voluptates porro nulla magnam
-              tenetur officiis. Exercitationem ut recusandae suscipit sed enim
-              voluptate, illo facere tempora cumque consectetur quisquam quasi
-              officia, beatae nam? Explicabo commodi sunt neque debitis
-              molestias quis blanditiis minima odio, quia excepturi rem
-              molestiae voluptatibus nulla, deleniti ab doloremque sed earum
-              veritatis incidunt. Tempore mollitia sit eaque officiis placeat
-              soluta, corrupti voluptatum at iusto voluptatem beatae excepturi,
-              qui ratione totam rem inventore natus odio, earum reiciendis
-              porro. Temporibus modi exercitationem beatae est rem quis
-              accusamus aliquid! Sint omnis dolor maxime itaque vero aspernatur
-              dolores quas non voluptatum illum quaerat illo doloribus, unde
-              explicabo officiis tempore autem numquam perferendis velit quo
-              deleniti distinctio delectus facilis. Asperiores molestias
-              accusamus dolorem.
-            </p>
+            <h6 className="project-desc-header">{project.name}</h6>
+            <p>{project.description}</p>
           </>
         )}
       </section>
     </div>
   );
 };
-
+ProjectDesc.propTypes = {
+  projectId: PropTypes.string.isRequired,
+};
 export default ProjectDesc;
