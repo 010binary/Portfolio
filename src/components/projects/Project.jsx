@@ -1,11 +1,10 @@
 import "./Project.scss";
 import PropTypes from "prop-types";
-import { Portfolio1, Portfolio2, Portfolio3 } from "../Photos";
 import { Projects, Design, Right, Left } from "../Icons";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BaseSkeleton from "../skeleton/BaseSkeleton";
-import SkeletonCard from "../skeleton/SkeletonCard";
+import RenderProject from "./Projectrender";
+import Projectdata from "../Projectdata";
 
 const Project = ({ projectsToShow, title }) => {
   const [loading, setLoading] = useState(true);
@@ -22,95 +21,22 @@ const Project = ({ projectsToShow, title }) => {
     return () => clearTimeout(timeout);
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  const displayProject = [
-    {
-      name: "Agency website.",
-      key: "94583",
-      img: Portfolio1,
-      languages: ["React", "Flask"],
-    },
-    {
-      name: "Dashboard website.",
-      key: "384945",
-      img: Portfolio2,
-      languages: ["React", "Flask"],
-    },
-    {
-      name: "Support Center website.",
-      key: "904958",
-      img: Portfolio3,
-      languages: ["React", "Flask"],
-    },
-    {
-      name: "hard work ",
-      key: "233244",
-      img: Portfolio1,
-      languages: ["React", "Flask"],
-    },
-    {
-      name: "Ecommeres",
-      key: "569558",
-      img: Portfolio2,
-      languages: ["React", "Flask"],
-    },
-    {
-      name: "Another project",
-      key: "748589",
-      img: Portfolio3,
-      languages: ["React", "Flask"],
-    },
-  ];
-
   const handleLeftClick = () => {
     setCurrentIndex(Math.max(currentIndex - 1, 0)); // Clamp to prevent negative index
   };
 
   const handleRightClick = () => {
     setCurrentIndex(
-      Math.min(currentIndex + 1, displayProject.length - projectsToShow) // Clamp to prevent overflow
+      Math.min(currentIndex + 1, Projectdata.length - projectsToShow) // Clamp to prevent overflow
     );
   };
 
-  const renderProject = displayProject
-    .slice(currentIndex, currentIndex + projectsToShow)
-    .map((project, index) => (
-      <>
-        {loadingImages ? (
-          <>
-            <SkeletonCard />
-          </>
-        ) : (
-          <>
-            <div
-              key={project.key + index}
-              className="project__section--content--projects"
-            >
-              <section className="image-project">
-                <img
-                  src={project.img}
-                  alt={`project image for ${project.name}`}
-                />
-                <div className="overlay">
-                  <Link to="/project/details" className="text">
-                    Visit
-                  </Link>
-                </div>
-              </section>
-              <section className="about-project">
-                <p className="project-name">{project.name}</p>
-                <section className="project-decription">
-                  <p className="Project-languages">
-                    {project.languages.map((language, index) => (
-                      <span key={index}>{language}</span>
-                    ))}
-                  </p>
-                </section>
-              </section>
-            </div>
-          </>
-        )}
-      </>
-    ));
+  const projects = RenderProject(
+    Projectdata,
+    currentIndex,
+    projectsToShow,
+    loadingImages
+  );
 
   return (
     <div className="project__section">
@@ -144,7 +70,7 @@ const Project = ({ projectsToShow, title }) => {
                 <button
                   className="right-btn"
                   disabled={
-                    currentIndex === displayProject.length - projectsToShow
+                    currentIndex === Projectdata.length - projectsToShow
                   }
                   onClick={handleRightClick}
                 >
@@ -154,7 +80,7 @@ const Project = ({ projectsToShow, title }) => {
             </>
           )}
         </div>
-        <div className="project__section--content">{renderProject}</div>
+        <div className="project__section--content">{projects}</div>
       </div>
     </div>
   );

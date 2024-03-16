@@ -25,7 +25,7 @@ function App() {
         <Route path="contact" element={<Contacts />} />
         <Route path="project" element={<Projects />} />
         <Route
-          path="project/details"
+          path="project/details/:projectId"
           element={
             <React.Suspense
               fallback={
