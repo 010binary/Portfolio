@@ -8,7 +8,7 @@ import BaseSkeleton from "../skeleton/BaseSkeleton";
 const NarBar = () => {
   const downloadResume = () => {
     const resumeUrl =
-      "https://drive.google.com/file/d/1-sgzJU7omKHt4MW1yRfx3BXUJPvAbrXE/view?usp=drive_link";
+      "https://drive.google.com/file/d/1DCRT-F2a4w7L879AGQmGel3SVYAPLmZU/view?usp=drive_link";
     window.open(resumeUrl, "_blank"); // Open in a new tab
   };
 
