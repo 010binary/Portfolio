@@ -36,6 +36,7 @@ import NextJs from "../imgs/Photos/NextJs.svg";
 import NodeJs from "../imgs/Photos/NodeJs.svg";
 import CLang from "../imgs/Photos/C-Lang.svg";
 import Bash from "../imgs/Photos/Bash.svg";
+import HeroMobileImg from "../imgs/Photos/Hero-mobile.webp";
 
 export {
   HeroImg,
@@ -76,4 +77,5 @@ export {
   NodeJs,
   CLang,
   Bash,
+  HeroMobileImg,
 };

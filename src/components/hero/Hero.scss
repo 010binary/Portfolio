@@ -3,7 +3,7 @@
 
 .hero__section {
   position: relative;
-
+  width: 100%;
   .hero-side-design {
     position: absolute;
     left: 0;
@@ -13,9 +13,11 @@
   & .container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     margin-top: 80px;
 
     .hero__section--leftside {
+      order: 1;
       width: 50%;
       text-align: justify;
       line-height: 2;
@@ -52,13 +54,14 @@
     }
 
     .hero__section--rightside {
+      order: 0;
       width: 40%;
       cursor: pointer;
       /*img{
         height: auto;
         width: 100%;
       }*/
-      .react-loading-skeleton{
+      .react-loading-skeleton {
         display: block;
       }
     }

@@ -12,7 +12,7 @@ const NarBar = () => {
     window.open(resumeUrl, "_blank"); // Open in a new tab
   };
 
-  const navbarRef = useRef(null); // Create a ref to access the navbar element
+  const navbarRef = useRef(null);
   let prevScrollpos = window.pageYOffset;
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +21,7 @@ const NarBar = () => {
 
       if (prevScrollpos > currentScrollPos) {
         current.style.top = "0";
+        // current.style.width = "50%";
       } else {
         current.style.top = "-100px";
       }
@@ -33,7 +34,7 @@ const NarBar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll); // Clean up on unmount
     };
-  }, []); // Empty dependency array to run only once
+  }, []);
 
   const [loadingImages, setLoadingImages] = useState(true);
   const [loadingtext, setLoadingtext] = useState(true);
@@ -45,72 +46,74 @@ const NarBar = () => {
     }, 500);
     // Clear timeout on component unmount
     return () => clearTimeout(timeout);
-  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+  }, []); 
 
   return (
-    <nav className="container" ref={navbarRef}>
-      <div className="logo">
-        <NavLink to="/home">
+    <header id="headers">
+      <nav className="container" ref={navbarRef}>
+        <div className="logo">
+          <NavLink to="/home">
+            {loadingImages ? (
+              <SkeletonImage dimension={{ width: 100, height: 100 }} />
+            ) : (
+              <img src={Logo} alt="My Logo" />
+            )}
+          </NavLink>
+        </div>
+
+        <ul className="navlinks">
+          <li className="navlist routes">
+            {loadingtext ? (
+              <BaseSkeleton type="title" />
+            ) : (
+              <NavLink to="/about" className="navlist__items">
+                About
+              </NavLink>
+            )}
+          </li>
+          <li className="navlist routes">
+            {loadingtext ? (
+              <BaseSkeleton type="title" />
+            ) : (
+              <NavLink to="/skills" className="navlist__items">
+                Skills
+              </NavLink>
+            )}
+          </li>
+          <li className="navlist routes">
+            {loadingtext ? (
+              <BaseSkeleton type="title" />
+            ) : (
+              <NavLink to="/project" className="navlist__items">
+                Project
+              </NavLink>
+            )}
+          </li>
+          <li className="navlist routes">
+            {loadingtext ? (
+              <BaseSkeleton type="title" />
+            ) : (
+              <NavLink to="/contact" className="navlist__items">
+                Contact
+              </NavLink>
+            )}
+          </li>
+        </ul>
+
+        <div className="navbtn">
           {loadingImages ? (
-            <SkeletonImage dimension={{ width: 100, height: 100 }} />
+            <SkeletonImage dimension={{ width: 110, height: 41 }} />
           ) : (
-            <img src={Logo} alt="My Logo" />
+            <button
+              className="btn resume navbtn__resume"
+              onClick={downloadResume}
+            >
+              Resume <img src={Download} alt="Download symbol" />
+            </button>
           )}
-        </NavLink>
-      </div>
-
-      <ul className="navlinks">
-        <li className="navlist routes">
-          {loadingtext ? (
-            <BaseSkeleton type="title" />
-          ) : (
-            <NavLink to="/about" className="navlist__items">
-              About
-            </NavLink>
-          )}
-        </li>
-        <li className="navlist routes">
-          {loadingtext ? (
-            <BaseSkeleton type="title" />
-          ) : (
-            <NavLink to="/skills" className="navlist__items">
-              Skills
-            </NavLink>
-          )}
-        </li>
-        <li className="navlist routes">
-          {loadingtext ? (
-            <BaseSkeleton type="title" />
-          ) : (
-            <NavLink to="/project" className="navlist__items">
-              Project
-            </NavLink>
-          )}
-        </li>
-        <li className="navlist routes">
-          {loadingtext ? (
-            <BaseSkeleton type="title" />
-          ) : (
-            <NavLink to="/contact" className="navlist__items">
-              Contact
-            </NavLink>
-          )}
-        </li>
-      </ul>
-
-      <div className="navbtn">
-        {loadingImages ? (
-          <SkeletonImage dimension={{ width: 110, height: 41 }} />
-        ) : (
-          <button
-            className="btn resume navbtn__resume"
-            onClick={downloadResume}
-          >
-            Resume <img src={Download} alt="Download symbol" />
-          </button>
-        )}
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </header>
   );
 };
 

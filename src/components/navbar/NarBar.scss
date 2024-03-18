@@ -1,6 +1,11 @@
 @import "../../Scss/reset";
 @import "../../Scss/buttons";
 
+#headers {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 nav {
   display: flex;
   justify-content: space-between;

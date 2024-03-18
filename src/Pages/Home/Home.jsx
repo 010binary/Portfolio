@@ -5,6 +5,7 @@ import Skills from "../../components/skill/Skills";
 import Project from "../../components/projects/Project";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
+import "./Home.scss"
 
 const Home = () => {
   return (

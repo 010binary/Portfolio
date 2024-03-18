@@ -1,6 +1,6 @@
 import "./Hero.scss";
 import { Instagram, Github, Twitter, Linkedin, Design } from "../Icons";
-import { HeroImg } from "../Photos";
+import { HeroImg, HeroMobileImg } from "../Photos";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SkeletonImage from "../skeleton/Skeletonimage";
@@ -9,6 +9,25 @@ import SkeletonArticle from "../skeleton/SkeletonArticle";
 const Hero = () => {
   const [loadingImages, setLoadingImages] = useState(true);
   const [loadingtext, setLoadingtext] = useState(true);
+
+  const [isMobile, setIsMobile] = useState(false); // State to track mobile width
+
+  // Function to check if screen width is mobile
+  const checkIsMobile = () => {
+    const screenWidth = window.innerWidth;
+    setIsMobile(screenWidth <= 768); // Adjust the threshold as needed
+  };
+
+  // Check mobile width on component mount
+  useEffect(() => {
+    checkIsMobile();
+
+    // Event listener for screen resize
+    window.addEventListener("resize", checkIsMobile);
+
+    // Cleanup on component unmount
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
   // Simulating image loading delay
   useEffect(() => {
@@ -77,7 +96,7 @@ const Hero = () => {
           {loadingImages ? (
             <SkeletonImage dimension={{ width: 472, height: 544 }} />
           ) : (
-            <img src={HeroImg} alt="My picture" />
+            <img src={isMobile ? HeroMobileImg : HeroImg} alt="My picture" /> // Use mobile image if on mobile
           )}
         </div>
       </div>

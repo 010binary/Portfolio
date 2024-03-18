@@ -45,6 +45,9 @@ body {
 #root {
   background-color: $background;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 //  Handle (Thumb) on hover for firefox
