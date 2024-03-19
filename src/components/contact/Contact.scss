@@ -130,3 +130,61 @@
     }
   }
 }
+
+@include mobile {
+  .contact__section {
+    width: 100vw;
+    .contact-side-design2 {
+      display: none; // remove this and put that mouse stuff
+    }
+    .abs {
+      margin-left: 55%;
+    }
+    &--content {
+      flex-direction: column;
+
+      &--sidebar {
+        flex-direction: row;
+        height: min-content;
+        justify-content: space-around;
+
+        .information {
+          display: none;
+        }
+        .call-me,
+        .Email-me,
+        .Address {
+          padding: 0;
+          width: min-content;
+          height: min-content;
+        }
+      }
+
+      &--form {
+        width: 100%;
+        margin-top: 20px;
+        .form {
+          gap: 15px;
+          .flex {
+            gap: 5px;
+          }
+
+          label {
+            .input {
+              height: 50px;
+
+              & + span {
+                top: 15px;
+              }
+            }
+          }
+
+          .submit {
+            width: 100%;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

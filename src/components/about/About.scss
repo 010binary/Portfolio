@@ -53,18 +53,32 @@
 @include mobile {
   .about__section {
     overflow: hidden;
+    width: 100vw;
     .container {
       padding: 5.5%;
     }
     &-content {
       flex-direction: column;
+      width: 100%;
+      overflow: hidden;
       .about__section--rightside {
+        width: 100%;
+        position: relative;
         h2 {
           // font-size: 1.1rem;
           span.blue-text,
           span.block {
             display: inline;
           }
+        }
+        p.about__section--description {
+          text-align: justify;
+          display: block;
+        }
+        .light {
+          position: absolute;
+          right: 0;
+          top: 15%;
         }
       }
       .about__section--leftside {

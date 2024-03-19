@@ -63,8 +63,8 @@
         left: 0;
         width: 0%;
         height: 2px;
-        background-color: $primary-color; 
-        transition: width 0.5s ease-in-out; 
+        background-color: $primary-color;
+        transition: width 0.5s ease-in-out;
       }
 
       &:hover::before {
@@ -76,6 +76,16 @@
       text-transform: capitalize;
       padding-right: 5px;
       display: inline;
+    }
+  }
+}
+
+@include mobile {
+  .skill__section {
+    padding: 0;
+
+    &-content {
+      padding: 0;
     }
   }
 }
