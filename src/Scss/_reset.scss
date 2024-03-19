@@ -44,10 +44,8 @@ body {
 /*This is going to be transfer to the container*/
 #root {
   background-color: $background;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 
 //  Handle (Thumb) on hover for firefox
@@ -62,7 +60,8 @@ body {
   scrollbar-width: 5px;
 }
 .container {
-  padding: 0 10vw;
+  padding: 0 10%;
+  overflow: hidden;
 }
 // width
 ::-webkit-scrollbar {
@@ -86,7 +85,7 @@ body {
 
 @import "./buttons";
 @import "./card";
-@import "./mobile";
+@import "./media";
 @import "./input";
 
 .block {
@@ -94,4 +93,10 @@ body {
 }
 .blue-text {
   color: $primary-color;
+}
+@include mobile {
+  .container {
+    padding: 0 5.5%;
+    overflow: hidden;
+  }
 }

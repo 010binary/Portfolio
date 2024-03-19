@@ -1,0 +1,17 @@
+$moblie-value: 500px;
+$tablet-value: 700px;
+
+
+@mixin mobile {
+    @media (max-width: $moblie-value) {
+        @content;
+
+    }
+}
+
+@mixin Tablet {
+    @media (max-width: $tablet-value) {
+        @content;
+
+    }
+}

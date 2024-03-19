@@ -1,5 +1,4 @@
 @import "../../Scss/reset";
-@import "../../Scss/buttons";
 
 .hero__section {
   position: relative;
@@ -13,11 +12,9 @@
   & .container {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     margin-top: 80px;
 
     .hero__section--leftside {
-      order: 1;
       width: 50%;
       text-align: justify;
       line-height: 2;
@@ -56,13 +53,57 @@
     .hero__section--rightside {
       order: 0;
       width: 40%;
-      cursor: pointer;
       /*img{
         height: auto;
         width: 100%;
       }*/
       .react-loading-skeleton {
         display: block;
+      }
+    }
+  }
+}
+@include mobile {
+  .hero__section {
+    width: 100vw;
+    .hero-side-design {
+      right: 0;
+      left: auto;
+    }
+    & .container {
+      flex-direction: column;
+      padding: 5.5%;
+      margin-top: 0;
+      .hero__section--leftside {
+        order: 1;
+        flex: 1;
+        width: 100%;
+        h1 {
+          margin-top: 0;
+          line-height: 1.5;
+        }
+        .description {
+          font-size: 1.3rem;
+          text-align: justify;
+          line-height: 1.6;
+          margin-top: 15px;
+        }
+        .hero-socials {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0;
+          margin-top: 20px;
+          padding: 0 10px;
+        }
+      }
+      .hero__section--rightside {
+        order: 0;
+        display: grid;
+        place-items: center;
+        width: auto;
+        img {
+          width: 100%;
+        }
       }
     }
   }

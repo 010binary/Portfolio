@@ -50,3 +50,29 @@
     }
   }
 }
+@include mobile {
+  .about__section {
+    overflow: hidden;
+    .container {
+      padding: 5.5%;
+    }
+    &-content {
+      flex-direction: column;
+      .about__section--rightside {
+        h2 {
+          // font-size: 1.1rem;
+          span.blue-text,
+          span.block {
+            display: inline;
+          }
+        }
+      }
+      .about__section--leftside {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
