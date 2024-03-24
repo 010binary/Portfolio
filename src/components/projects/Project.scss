@@ -147,3 +147,24 @@
     }
   }
 }
+@include mobile {
+  .project__section {
+    &--header {
+      &--buttons {
+        button {
+          display: none;
+        }
+      }
+    }
+    &--content {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      gap: 12px;
+      height: fit-content;
+      &--projects {
+        width: 70%;
+      }
+    }
+  }
+}
