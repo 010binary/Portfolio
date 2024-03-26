@@ -15,7 +15,7 @@ const Hero = () => {
   // Function to check if screen width is mobile
   const checkIsMobile = () => {
     const screenWidth = window.innerWidth;
-    setIsMobile(screenWidth <= 768); // Adjust the threshold as needed
+    setIsMobile(screenWidth <= 850); // Adjust the threshold as needed
   };
 
   // Check mobile width on component mount

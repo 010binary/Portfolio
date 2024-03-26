@@ -12,5 +12,9 @@
         font-family: $syne-font;
       }
     }
+
+    &--content {
+      flex-wrap: nowrap;
+    }
   }
 }

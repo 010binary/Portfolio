@@ -125,6 +125,7 @@
         .project-name {
           font-family: $paragraph-font;
           font-weight: 400;
+          font-size: 1.1rem;
         }
         .project-decription {
           .Project-languages {
@@ -158,12 +159,17 @@
     }
     &--content {
       flex-wrap: nowrap;
+      overflow: hidden;
       overflow-x: auto;
-      overflow-y: hidden;
       gap: 12px;
-      height: fit-content;
+      height: 300px;
+      padding: auto;
+      height: 380px;
+      padding-top: 20px;
+      margin-top: 0;
       &--projects {
-        width: 70%;
+        width: 80%;
+        height: 90%;
       }
     }
   }

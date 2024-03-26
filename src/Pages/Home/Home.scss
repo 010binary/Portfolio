@@ -1,3 +1,9 @@
 #home-page {
   position: relative;
+  /*Keeping the carosel linear for the home page*/
+  .project__section{
+    &--content{
+      flex-wrap: nowrap;
+    }
+  }
 }
