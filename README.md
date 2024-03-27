@@ -41,3 +41,4 @@ Explore the different sections of the portfolio to learn more about me, my skill
 - Twitter: [@August13200268](https://twitter.com/August13200296)
 
 Thank you for visiting my portfolio!
+---
