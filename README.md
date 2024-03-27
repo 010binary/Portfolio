@@ -1,3 +1,4 @@
+---
 # Portfolio Project
 
 Welcome to my portfolio project! This project showcases my skills, projects, and experiences. Whether you're a potential employer, collaborator, or just curious, feel free to explore and learn more about me.
