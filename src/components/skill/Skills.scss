@@ -83,9 +83,27 @@
 @include mobile {
   .skill__section {
     padding: 0;
-
+    .margin {
+      margin: 0;
+    }
     &-content {
       padding: 0;
+
+      .row {
+        flex-wrap: wrap;
+        padding: 0;
+        .skill-img {
+          img {
+            width: 70%;
+          }
+          p {
+            font-size: 100%;
+          }
+        }
+      }
+    }
+    .see-more {
+      margin-top: 20px;
     }
   }
 }

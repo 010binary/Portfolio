@@ -150,6 +150,7 @@
 }
 @include mobile {
   .project__section {
+    width: 100vw;
     &--header {
       &--buttons {
         button {
@@ -158,11 +159,9 @@
       }
     }
     &--content {
-      flex-wrap: nowrap;
       overflow: hidden;
       overflow-x: auto;
       gap: 12px;
-      height: 300px;
       padding: auto;
       height: 380px;
       padding-top: 20px;
@@ -170,6 +169,18 @@
       &--projects {
         width: 80%;
         height: 90%;
+
+        &:hover {
+          // tell chatgpt to make this on click 
+          transform: scale(1.05);
+          box-shadow: -13px 13px 19px #b3b3b3, 13px -13px 19px #a5a5a5;
+          .image-project {
+            .overlay {
+              bottom: 0;
+              height: 100%;
+            }
+          }
+        }
       }
     }
   }

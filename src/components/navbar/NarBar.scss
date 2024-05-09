@@ -82,3 +82,8 @@ nav {
     }
   }
 }
+@include mobile{
+  nav{
+    display: none;
+  }
+}

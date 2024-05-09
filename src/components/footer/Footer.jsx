@@ -8,7 +8,6 @@ import {
 
 const Footer = () => {
   return (
-    <div className="container">
       <footer>
         <div className="footer__text">
           <p>&#169; 2024. All Rights Reserved &#8755;</p>
@@ -44,7 +43,6 @@ const Footer = () => {
           </a>
         </div>
       </footer>
-    </div>
   );
 };
 

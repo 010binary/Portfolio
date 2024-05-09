@@ -1,42 +1,45 @@
 @import "../../Scss/reset";
 
-.container {
-  footer {
-    margin-top: 30px;
+footer {
+  padding: 0 10%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $gray;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  // transform: translate(-50%, -50%); trying to center with transform 
+
+
+  .footer__text {
+    font-size: 1.3rem;
+    font-family: $paragraph-font;
+  }
+
+  .footer__icon {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid $gray;
-    padding-top: 15px;
-    padding-bottom: 10px;
-
-    .footer__text {
-      font-size: 1.3rem;
-      font-family: $paragraph-font;
-    }
-
-    .footer__icon {
-      display: flex;
-      justify-content: space-between;
-      width: 12vw;
-      img {
-        width: 35px;
-      }
+    width: 12vw;
+    img {
+      width: 35px;
     }
   }
 }
-@include mobile{
-  .container{
-    footer{
-      width: 100%;
-      .footer__text{
-        font-size: 1rem;
-      }
-      .footer__icon{
-        width: min-content;
-        img {
-          width: 25px;
-        }
+
+@include mobile {
+  footer {
+    width: 300px;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: hidden;
+    .footer__text {
+      font-size: 1rem;
+    }
+    .footer__icon {
+      width: min-content;
+      img {
+        width: 25px;
       }
     }
   }
